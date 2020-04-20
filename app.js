@@ -1,4 +1,4 @@
-var svg = d3.select("#viz")
+const svg = d3.select("#viz")
   .append("svg")
   .attr("width", 1000)
   .attr("height", 1000);
@@ -14,14 +14,13 @@ const circleA_config = Object.freeze({
 const circleA_originX = 300;
 const circleA_originY = 300;
 const circleA_radius = calculateRadius(circleA_config); //Raduis for Circle A
+const circleA_text = "Alan Kaufman";
 
 var circleBRadius = 150;
 var circleCRadius = 100;
 var circleDRadius = 60;
 
-var group = svg.append("g");
-
-var circleA = group.append("circle").attr({
+var circleA = svg.append("g").append("circle").attr({
   cx: circleA_originX,
   cy: circleA_originY,
   opacity: 100,
@@ -30,7 +29,6 @@ var circleA = group.append("circle").attr({
   // to set color for Dash-Circumference 
 }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
 
-var circleA_text = "Alan Kaufman";
 svg.append("text")
   .attr("x", circleA_originX)
   .attr("y", circleA_originY)
