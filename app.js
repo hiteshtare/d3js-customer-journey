@@ -6,6 +6,7 @@ const circleA_config = Object({
   Email: 11,
   SMS: 6,
   Text: 'Segment A',
+  id: 'circleA',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -35,6 +36,7 @@ const circleB_config = Object({
   Email: 6,
   SMS: 15,
   Text: 'Segment B',
+  id: 'circleB',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -59,6 +61,7 @@ const circleC_config = Object({
   Email: 6,
   SMS: 5,
   Text: 'Segment C',
+  id: 'circleC',
   originX: 300,
   originY: 300,
   //Below values are Calculated

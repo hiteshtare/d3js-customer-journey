@@ -47,31 +47,41 @@ function calculateRadius_NodeOrigin(p_circle_config) {
 }
 
 function renderCircle(p_circle_config) {
-  //Container for Circle A
-  let circleA_svg =
-    d3.select("#viz")
-    .append("svg")
-    .attr("width", svg_config.width)
-    .attr("height", svg_config.height);
 
-  //Create dash circumference for Circle A
-  circleA_svg.append("g").append("circle").attr({
-    cx: p_circle_config.originX,
-    cy: p_circle_config.originY,
-    opacity: 100,
-    r: p_circle_config.raduis,
-    fill: "none"
-    // to set color for Dash-Circumference 
-  }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
-  //Add text at the center
-  circleA_svg.append("text")
-    .attr("x", p_circle_config.originX)
-    .attr("y", p_circle_config.originY)
-    .attr("text-anchor", "middle")
-    .style("font-size", "20px")
-    .text(p_circle_config.Text);
+  const doesCircleExist = document.getElementById(`${p_circle_config.id}`);
 
-  return circleA_svg;
+  if (doesCircleExist === null) {
+    //Container for Circle
+    let circle_svg =
+      d3.select("#viz")
+      .append("svg")
+      .attr("width", svg_config.width)
+      .attr("height", svg_config.height).attr("id", p_circle_config.id);
+
+    //Create dash circumference for Circle
+    circle_svg.append("g").append("circle").attr({
+      cx: p_circle_config.originX,
+      cy: p_circle_config.originY,
+      opacity: 100,
+      r: p_circle_config.raduis,
+      fill: "none"
+      // to set color for Dash-Circumference 
+    }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
+    //Add text at the center
+    circle_svg.append("text")
+      .attr("x", p_circle_config.originX)
+      .attr("y", p_circle_config.originY)
+      .attr("text-anchor", "middle")
+      .style("font-size", "20px")
+      .text(p_circle_config.Text);
+
+    return circle_svg;
+  } else {
+    //Container for Circle
+    let circle_svg = d3.select(`#${p_circle_config.id}`);
+
+    return circle_svg;
+  }
 }
 
 function renderEmailNodes(p_circle_svg, p_circle_config) {
@@ -83,7 +93,8 @@ function renderEmailNodes(p_circle_svg, p_circle_config) {
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
       r: Nodes.Raduis,
-      fill: Nodes.Email.color
+      fill: Nodes.Email.color,
+      class: 'nodes'
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
@@ -107,7 +118,8 @@ function renderFacebookNodes(p_circle_svg, p_circle_config) {
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
       r: Nodes.Raduis,
-      fill: Nodes.Facebook.color
+      fill: Nodes.Facebook.color,
+      class: 'nodes'
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
@@ -129,7 +141,8 @@ function renderMeetingNodes(p_circle_svg, p_circle_config) {
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
       r: Nodes.Raduis,
-      fill: Nodes.Meeting.color
+      fill: Nodes.Meeting.color,
+      class: 'nodes'
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
@@ -151,7 +164,8 @@ function renderSMSNodes(p_circle_svg, p_circle_config) {
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
       r: Nodes.Raduis,
-      fill: Nodes.SMS.color
+      fill: Nodes.SMS.color,
+      class: 'nodes'
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
@@ -230,6 +244,8 @@ function renderLegends(p_circle_svg, p_circle_config) {
 }
 
 function renderAllNodes(p_circle_svg, p_circle_config) {
+  console.warn(`renderAllNodes`);
+
   renderEmailNodes(p_circle_svg, p_circle_config);
   renderFacebookNodes(p_circle_svg, p_circle_config);
   renderMeetingNodes(p_circle_svg, p_circle_config);
@@ -238,16 +254,35 @@ function renderAllNodes(p_circle_svg, p_circle_config) {
 }
 
 function rangeSliderForNodes(circle_svg, p_circle_config) {
-  var slider = document.getElementById("rangeEmail");
-  var output = document.getElementById("spanEmail");
-  output.innerHTML = slider.value;
-  output.innerHTML = `` + p_circle_config.Email;
+  console.warn(`rangeSliderForNodes`);
 
-  slider.oninput = function () {
-    output.innerHTML = this.value;
-    p_circle_config.Email = +this.value;
+  var sliderRange_Email = document.getElementById("rangeEmail");
+  var spanEmail = document.getElementById("spanEmail");
+  spanEmail.innerHTML = sliderRange_Email.value;
+  spanEmail.innerHTML = `` + p_circle_config.Email;
 
-    renderAllNodes(circle_svg, p_circle_config);
+  sliderRange_Email.oninput = function () {
+    //Assigned slider value for DOM
+    spanEmail.innerHTML = this.value;
+
+    //To check if slider value is greater than current config value for Email
+    // then add new node in the existing SVG
+    if (+this.value >= p_circle_config.Email) {
+      //Update value for email in Circle Config
+      p_circle_config.Email = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circle_svg, p_circle_config);
+    } else {
+      // To remove all nodes for the current SVG circle
+      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
+      // To render circle if it does not exists in DOM
+      const circleA_svg = renderCircle(p_circle_config);
+
+      //Update value for email in Circle Config
+      p_circle_config.Email = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circleA_svg, p_circle_config);
+    }
   }
 
 }
