@@ -1,116 +1,70 @@
+//================================CIRCLE A================================//
 //Config  for Circle A - Nodes Count
 const circleA_config = Object({
   Meeting: 5,
   Facebook: 10,
   Email: 11,
   SMS: 6,
-  Text: 'Alan Kaufman',
+  Text: 'Segment A',
   originX: 300,
   originY: 300,
+  //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
   nodeOriginY: 0
 });
-//Calculate raduis for Circle A
-circleA_config.raduis = calculateRadius(circleA_config);
-//Calculate Node Origin for Circle A
-circleA_config.nodeOriginX = circleA_config.originX + ((circleA_config.raduis) * Math.sin(0));
-circleA_config.nodeOriginY = circleA_config.originY - ((circleA_config.raduis) * Math.cos(0));
-
+//Calculate raduis and Node Origin for Circle A
+calculateRadius_NodeOrigin(circleA_config);
 //Container for Circle A
-const circleA_svg = renderCircle("#viz", circleA_config);
+const circleA_svg = renderCircle(circleA_config);
 
-renderEmailNodes(circleA_svg, circleA_config);
-renderFacebookNodes(circleA_svg, circleA_config);
-renderMeetingNodes(circleA_svg, circleA_config);
-renderSMSNodes(circleA_svg, circleA_config);
+renderAllNodes(circleA_svg, circleA_config);
 
+//To render graph legends
 renderLegends(circleA_svg, circleA_config);
-/*
-var randomLabel = circleA_svg.append("rect").attr({
-    x: circleA_config.nodeOriginX,
-    y: circleA_config.nodeOriginY-5,
-    width: 10,
-    height: 10,
-    opacity: 100,
-    fill: "red"
-  });
-
-var circleB = circleA_svg.append("circle").attr({
-cx: originX + 200,
-cy: originY,
-opacity: 100,
-r: circleBRadius,
-fill: "none",
-stroke: "black"
+//================================CIRCLE A================================//
+//================================CIRCLE B================================//
+//Config  for Circle B - Nodes Count
+const circleB_config = Object({
+  Meeting: 3,
+  Facebook: 4,
+  Email: 5,
+  SMS: 6,
+  Text: 'Segment B',
+  originX: 300,
+  originY: 300,
+  //Below values are Calculated
+  raduis: 0,
+  nodeOriginX: 0,
+  nodeOriginY: 0
 });
+//Calculate raduis and Node Origin for Circle B
+calculateRadius_NodeOrigin(circleB_config);
+//Container for Circle B
+const circleB_svg = renderCircle(circleB_config);
 
-var circleBOriginX = originX + 200 + ((80) * Math.sin(0));
-var circleBOriginY = originY - ((80) * Math.cos(0));
+renderAllNodes(circleB_svg, circleB_config);
+//================================CIRCLE B================================//
 
-var circleb1 = circleA_svg.append("circle").attr({
-cx: circleBOriginX,
-cy: circleBOriginY,
-opacity: 100,
-r: 5,
-fill: "orange"
+//================================CIRCLE C================================//
+//Config for Circle C - Nodes Count
+const circleC_config = Object({
+  Meeting: 13,
+  Facebook: 4,
+  Email: 15,
+  SMS: 16,
+  Text: 'Segment C',
+  originX: 300,
+  originY: 300,
+  //Below values are Calculated
+  raduis: 0,
+  nodeOriginX: 0,
+  nodeOriginY: 0
 });
+//Calculate raduis and Node Origin for Circle C
+calculateRadius_NodeOrigin(circleC_config);
+//Container for Circle C
+const circleC_svg = renderCircle(circleC_config);
 
-var circleb2 = circleA_svg.append("circle").attr({
-cx: circleBOriginX,
-cy: circleBOriginY,
-opacity: 100,
-r: 5,
-fill: "orange"
-});
-
-var squareb2 = circleA_svg.append("circle").attr({
-cx: circleBOriginX,
-cy: circleBOriginY,
-opacity: 100,
-r: 5,
-fill: "#3b5998"
-});
-
-circleb2.attr("transform", "rotate(10, 400, 200)");
-squareb2.attr("transform", "rotate(20, 400, 200)");
-
-var circleC = circleA_svg.append("circle").attr({
-cx: originX + 200 + 200,
-cy: originY,
-opacity: 100,
-r: circleCRadius,
-fill: "none",
-stroke: "black"
-});
-
-var circleCOriginX = originX + 200 + 200 + ((80) * Math.sin(0));
-var circleCOriginY = originY - ((80) * Math.cos(0));
-
-var circleb1 = circleA_svg.append("circle").attr({
-cx: circleCOriginX,
-cy: circleCOriginY,
-opacity: 100,
-r: 5,
-fill: "orange"
-});
-
-var circleC2 = circleA_svg.append("circle").attr({
-cx: circleCOriginX,
-cy: circleCOriginY,
-opacity: 100,
-r: 5,
-fill: "orange"
-});
-
-var squareb2 = circleA_svg.append("circle").attr({
-cx: circleBOriginX,
-cy: circleBOriginY,
-opacity: 100,
-r: 5,
-fill: "#3b5998"
-});
-
-circleb2.attr("transform", "rotate(10, 400, 200)");
-squareb2.attr("transform", "rotate(20, 400, 200)");
-*/
+renderAllNodes(circleC_svg, circleC_config);
+//================================CIRCLE C================================//

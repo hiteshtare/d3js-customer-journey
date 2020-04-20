@@ -5,6 +5,7 @@ const Weights = Object.freeze({
   Email: 5,
   SMS: 3
 });
+// Nodes Config
 const Nodes = {
   Raduis: 5, // Raduis of the node
   Meeting: {
@@ -21,25 +22,32 @@ const Nodes = {
   }
 };
 let last_Rotate_Value = 0;
+const svg_config = {
+  width: 600,
+  height: 600
+};
 
-function calculateRadius(p_circle_config) {
-  console.warn(`calculateRadius`);
+function calculateRadius_NodeOrigin(p_circle_config) {
+  console.warn(`calculateRadius_NodeOrigin`);
 
   const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
     p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
 
   console.log(`Raduis: ${raduis}`);
 
-  return raduis;
+  p_circle_config.raduis = raduis;
+
+  p_circle_config.nodeOriginX = p_circle_config.originX + ((p_circle_config.raduis) * Math.sin(0));
+  p_circle_config.nodeOriginY = p_circle_config.originY - ((p_circle_config.raduis) * Math.cos(0));
 }
 
-function renderCircle(containerId, p_circle_config) {
+function renderCircle(p_circle_config) {
   //Container for Circle A
   let circleA_svg =
-    d3.select(`${containerId}`)
+    d3.select("#viz")
     .append("svg")
-    .attr("width", 1000)
-    .attr("height", 1000);
+    .attr("width", svg_config.width)
+    .attr("height", svg_config.height);
 
   //Create dash circumference for Circle A
   circleA_svg.append("g").append("circle").attr({
@@ -214,4 +222,12 @@ function renderLegends(p_circle_svg, p_circle_config) {
     .style("font-size", "16px")
     .text("SMS");
   //---------------------SMS---------------------//
+}
+
+function renderAllNodes(circleA_svg, circleA_config) {
+  renderEmailNodes(circleA_svg, circleA_config);
+  renderFacebookNodes(circleA_svg, circleA_config);
+  renderMeetingNodes(circleA_svg, circleA_config);
+  renderSMSNodes(circleA_svg, circleA_config);
+
 }
