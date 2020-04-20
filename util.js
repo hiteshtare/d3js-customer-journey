@@ -6,20 +6,17 @@ const Weights = Object.freeze({
   SMS: 3
 });
 const Nodes = {
+  Raduis: 5, // Raduis of the node
   Meeting: {
-    raduis: 5,
     color: `#5BC236`
   },
   Facebook: {
-    raduis: 5,
     color: `#3b5998`
   },
   Email: {
-    raduis: 5,
     color: `orange`
   },
   SMS: {
-    raduis: 5,
     color: `black`
   }
 };
@@ -44,15 +41,15 @@ function renderEmailNodes(p_circleA_svg, p_circle_config) {
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
-      r: Nodes.Email.raduis,
+      r: Nodes.Raduis,
       fill: Nodes.Email.color
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
     if (index !== 0) {
-      last_Rotate_Value = 5 * index;
+      last_Rotate_Value = Nodes.Raduis * index;
 
-      email.attr("transform", `rotate(${last_Rotate_Value}, 300, 300)`);
+      email.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
     }
   }
 
@@ -68,14 +65,14 @@ function renderFacebookNodes(p_circleA_svg, p_circle_config) {
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
-      r: Nodes.Facebook.raduis,
+      r: Nodes.Raduis,
       fill: Nodes.Facebook.color
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
-    last_Rotate_Value = last_Rotate_Value + 5;
+    last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
 
-    facebook.attr("transform", `rotate(${last_Rotate_Value}, 300, 300)`);
+    facebook.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
   return p_circleA_svg;
@@ -90,14 +87,14 @@ function renderMeetingNodes(p_circleA_svg, p_circle_config) {
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
-      r: Nodes.Meeting.raduis,
+      r: Nodes.Raduis,
       fill: Nodes.Meeting.color
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
-    last_Rotate_Value = last_Rotate_Value + 5;
+    last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
 
-    meeting.attr("transform", `rotate(${last_Rotate_Value}, 300, 300)`);
+    meeting.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
   return p_circleA_svg;
@@ -112,14 +109,14 @@ function renderSMSNodes(p_circleA_svg, p_circle_config) {
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
-      r: Nodes.SMS.raduis,
+      r: Nodes.Raduis,
       fill: Nodes.SMS.color
     });
 
     // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
-    last_Rotate_Value = last_Rotate_Value + 5;
+    last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
 
-    sms.attr("transform", `rotate(${last_Rotate_Value}, 300, 300)`);
+    sms.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
   return p_circleA_svg;
