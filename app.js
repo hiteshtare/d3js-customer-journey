@@ -1,8 +1,6 @@
-const svg = d3.select("#viz")
-  .append("svg")
-  .attr("width", 1000)
-  .attr("height", 1000);
-
+//Center for Circle A
+const circleA_originX = 300;
+const circleA_originY = 300;
 //Config  for Circle A - Nodes Count
 const circleA_config = Object.freeze({
   Meeting: 5,
@@ -10,17 +8,15 @@ const circleA_config = Object.freeze({
   Email: 11,
   SMS: 6
 });
-//Center for Circle A
-const circleA_originX = 300;
-const circleA_originY = 300;
 const circleA_radius = calculateRadius(circleA_config); //Raduis for Circle A
 const circleA_text = "Alan Kaufman";
 
-var circleBRadius = 150;
-var circleCRadius = 100;
-var circleDRadius = 60;
+const circleA_svg = d3.select("#viz")
+  .append("svg")
+  .attr("width", 1000)
+  .attr("height", 1000);
 
-var circleA = svg.append("g").append("circle").attr({
+circleA_svg.append("g").append("circle").attr({
   cx: circleA_originX,
   cy: circleA_originY,
   opacity: 100,
@@ -29,7 +25,7 @@ var circleA = svg.append("g").append("circle").attr({
   // to set color for Dash-Circumference 
 }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
 
-svg.append("text")
+circleA_svg.append("text")
   .attr("x", circleA_originX)
   .attr("y", circleA_originY)
   .attr("text-anchor", "middle")
@@ -39,103 +35,9 @@ svg.append("text")
 var nodeOriginX = circleA_originX + ((circleA_radius) * Math.sin(0));
 var nodeOriginY = circleA_originY - ((circleA_radius) * Math.cos(0));
 
-var emailA0 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5, //to-do: dynamic
-  fill: "orange" //to-do: dynamic
-});
+renderEmailNodes(circleA_svg, circleA_config, nodeOriginX, nodeOriginY);
 
-var emailA1 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA2 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA3 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA4 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA5 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA6 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA7 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA7 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA8 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA9 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var emailA10 = svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-var fbA1 = svg.append("circle").attr({
+var fbA1 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -143,7 +45,7 @@ var fbA1 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA2 = svg.append("circle").attr({
+var fbA2 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -151,7 +53,7 @@ var fbA2 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA3 = svg.append("circle").attr({
+var fbA3 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -159,7 +61,7 @@ var fbA3 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA4 = svg.append("circle").attr({
+var fbA4 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -167,7 +69,7 @@ var fbA4 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA5 = svg.append("circle").attr({
+var fbA5 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -175,7 +77,7 @@ var fbA5 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA6 = svg.append("circle").attr({
+var fbA6 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -183,7 +85,7 @@ var fbA6 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA7 = svg.append("circle").attr({
+var fbA7 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -191,7 +93,7 @@ var fbA7 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA8 = svg.append("circle").attr({
+var fbA8 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -199,7 +101,7 @@ var fbA8 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA9 = svg.append("circle").attr({
+var fbA9 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -207,7 +109,7 @@ var fbA9 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var fbA10 = svg.append("circle").attr({
+var fbA10 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -215,7 +117,7 @@ var fbA10 = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-var meetingA1 = svg.append("circle").attr({
+var meetingA1 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -223,7 +125,7 @@ var meetingA1 = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-var meetingA2 = svg.append("circle").attr({
+var meetingA2 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -231,7 +133,7 @@ var meetingA2 = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-var meetingA3 = svg.append("circle").attr({
+var meetingA3 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -239,7 +141,7 @@ var meetingA3 = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-var meetingA4 = svg.append("circle").attr({
+var meetingA4 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -247,7 +149,7 @@ var meetingA4 = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-var meetingA5 = svg.append("circle").attr({
+var meetingA5 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -255,7 +157,7 @@ var meetingA5 = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-var smsA1 = svg.append("circle").attr({
+var smsA1 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -263,7 +165,7 @@ var smsA1 = svg.append("circle").attr({
   fill: "black"
 });
 
-var smsA2 = svg.append("circle").attr({
+var smsA2 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -271,7 +173,7 @@ var smsA2 = svg.append("circle").attr({
   fill: "black"
 });
 
-var smsA3 = svg.append("circle").attr({
+var smsA3 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -279,7 +181,7 @@ var smsA3 = svg.append("circle").attr({
   fill: "black"
 });
 
-var smsA4 = svg.append("circle").attr({
+var smsA4 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -287,7 +189,7 @@ var smsA4 = svg.append("circle").attr({
   fill: "black"
 });
 
-var smsA5 = svg.append("circle").attr({
+var smsA5 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -295,7 +197,7 @@ var smsA5 = svg.append("circle").attr({
   fill: "black"
 });
 
-var smsA6 = svg.append("circle").attr({
+var smsA6 = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY,
   opacity: 100,
@@ -303,9 +205,12 @@ var smsA6 = svg.append("circle").attr({
   fill: "black"
 });
 
+var circleBRadius = 150;
+var circleCRadius = 100;
+var circleDRadius = 60;
 
 /*
-var randomA1 = svg.append("rect").attr({
+var randomA1 = circleA_svg.append("rect").attr({
     x: nodeOriginX,
     y: nodeOriginY-5,
     width: 10,
@@ -315,17 +220,6 @@ var randomA1 = svg.append("rect").attr({
   });
 */
 
-//emailA0 is not transformed as its origin is at 0,300,300
-emailA1.attr("transform", "rotate(5, 300, 300)"); //to-do: dynamic - (angle,x,y)
-emailA2.attr("transform", "rotate(10, 300, 300)");
-emailA3.attr("transform", "rotate(15, 300, 300)");
-emailA4.attr("transform", "rotate(20, 300, 300)");
-emailA5.attr("transform", "rotate(25, 300, 300)");
-emailA6.attr("transform", "rotate(30, 300, 300)");
-emailA7.attr("transform", "rotate(35, 300, 300)");
-emailA8.attr("transform", "rotate(40, 300, 300)");
-emailA9.attr("transform", "rotate(45, 300, 300)");
-emailA10.attr("transform", "rotate(50, 300, 300)");
 fbA1.attr("transform", "rotate(55, 300, 300)");
 fbA2.attr("transform", "rotate(60, 300, 300)");
 fbA3.attr("transform", "rotate(65, 300, 300)");
@@ -351,7 +245,7 @@ smsA6.attr("transform", "rotate(155, 300, 300)");
 // randomA1.attr("transform", "rotate(160, 300, 300)");
 
 
-var emailLabel = svg.append("circle").attr({
+var emailLabel = circleA_svg.append("circle").attr({
   cx: nodeOriginX - 120,
   cy: nodeOriginY - 65,
   opacity: 100,
@@ -359,14 +253,14 @@ var emailLabel = svg.append("circle").attr({
   fill: "orange"
 });
 
-svg.append("text")
+circleA_svg.append("text")
   .attr("x", 210)
   .attr("y", 40)
   .attr("text-anchor", "middle")
   .style("font-size", "16px")
   .text("Email");
 
-var fbLabel = svg.append("circle").attr({
+var fbLabel = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY - 65,
   opacity: 100,
@@ -374,14 +268,14 @@ var fbLabel = svg.append("circle").attr({
   fill: "#3b5998"
 });
 
-svg.append("text")
+circleA_svg.append("text")
   .attr("x", 375)
   .attr("y", 40)
   .attr("text-anchor", "middle")
   .style("font-size", "16px")
   .text("Facebook Message");
 
-var meetingLabel = svg.append("circle").attr({
+var meetingLabel = circleA_svg.append("circle").attr({
   cx: nodeOriginX - 120,
   cy: nodeOriginY - 45,
   opacity: 100,
@@ -389,14 +283,14 @@ var meetingLabel = svg.append("circle").attr({
   fill: "#5BC236"
 });
 
-svg.append("text")
+circleA_svg.append("text")
   .attr("x", 217)
   .attr("y", 60)
   .attr("text-anchor", "middle")
   .style("font-size", "16px")
   .text("Meeting");
 
-var smsLabel = svg.append("circle").attr({
+var smsLabel = circleA_svg.append("circle").attr({
   cx: nodeOriginX,
   cy: nodeOriginY - 45,
   opacity: 100,
@@ -404,15 +298,17 @@ var smsLabel = svg.append("circle").attr({
   fill: "black"
 });
 
-svg.append("text")
+circleA_svg.append("text")
   .attr("x", 330)
   .attr("y", 60)
   .attr("text-anchor", "middle")
   .style("font-size", "16px")
   .text("SMS");
 
+
+
 /*
-var randomLabel = svg.append("rect").attr({
+var randomLabel = circleA_svg.append("rect").attr({
     x: nodeOriginX,
     y: nodeOriginY-5,
     width: 10,
@@ -421,7 +317,7 @@ var randomLabel = svg.append("rect").attr({
     fill: "red"
   });
 
-var circleB = svg.append("circle").attr({
+var circleB = circleA_svg.append("circle").attr({
 cx: originX + 200,
 cy: originY,
 opacity: 100,
@@ -433,7 +329,7 @@ stroke: "black"
 var circleBOriginX = originX + 200 + ((80) * Math.sin(0));
 var circleBOriginY = originY - ((80) * Math.cos(0));
 
-var circleb1 = svg.append("circle").attr({
+var circleb1 = circleA_svg.append("circle").attr({
 cx: circleBOriginX,
 cy: circleBOriginY,
 opacity: 100,
@@ -441,7 +337,7 @@ r: 5,
 fill: "orange"
 });
 
-var circleb2 = svg.append("circle").attr({
+var circleb2 = circleA_svg.append("circle").attr({
 cx: circleBOriginX,
 cy: circleBOriginY,
 opacity: 100,
@@ -449,7 +345,7 @@ r: 5,
 fill: "orange"
 });
 
-var squareb2 = svg.append("circle").attr({
+var squareb2 = circleA_svg.append("circle").attr({
 cx: circleBOriginX,
 cy: circleBOriginY,
 opacity: 100,
@@ -460,7 +356,7 @@ fill: "#3b5998"
 circleb2.attr("transform", "rotate(10, 400, 200)");
 squareb2.attr("transform", "rotate(20, 400, 200)");
 
-var circleC = svg.append("circle").attr({
+var circleC = circleA_svg.append("circle").attr({
 cx: originX + 200 + 200,
 cy: originY,
 opacity: 100,
@@ -472,7 +368,7 @@ stroke: "black"
 var circleCOriginX = originX + 200 + 200 + ((80) * Math.sin(0));
 var circleCOriginY = originY - ((80) * Math.cos(0));
 
-var circleb1 = svg.append("circle").attr({
+var circleb1 = circleA_svg.append("circle").attr({
 cx: circleCOriginX,
 cy: circleCOriginY,
 opacity: 100,
@@ -480,7 +376,7 @@ r: 5,
 fill: "orange"
 });
 
-var circleC2 = svg.append("circle").attr({
+var circleC2 = circleA_svg.append("circle").attr({
 cx: circleCOriginX,
 cy: circleCOriginY,
 opacity: 100,
@@ -488,7 +384,7 @@ r: 5,
 fill: "orange"
 });
 
-var squareb2 = svg.append("circle").attr({
+var squareb2 = circleA_svg.append("circle").attr({
 cx: circleBOriginX,
 cy: circleBOriginY,
 opacity: 100,
