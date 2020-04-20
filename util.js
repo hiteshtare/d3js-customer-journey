@@ -229,10 +229,25 @@ function renderLegends(p_circle_svg, p_circle_config) {
   //---------------------SMS---------------------//
 }
 
-function renderAllNodes(circleA_svg, circleA_config) {
-  renderEmailNodes(circleA_svg, circleA_config);
-  renderFacebookNodes(circleA_svg, circleA_config);
-  renderMeetingNodes(circleA_svg, circleA_config);
-  renderSMSNodes(circleA_svg, circleA_config);
+function renderAllNodes(p_circle_svg, p_circle_config) {
+  renderEmailNodes(p_circle_svg, p_circle_config);
+  renderFacebookNodes(p_circle_svg, p_circle_config);
+  renderMeetingNodes(p_circle_svg, p_circle_config);
+  renderSMSNodes(p_circle_svg, p_circle_config);
+
+}
+
+function rangeSliderForNodes(circle_svg, p_circle_config) {
+  var slider = document.getElementById("rangeEmail");
+  var output = document.getElementById("spanEmail");
+  output.innerHTML = slider.value;
+  output.innerHTML = `` + p_circle_config.Email;
+
+  slider.oninput = function () {
+    output.innerHTML = this.value;
+    p_circle_config.Email = +this.value;
+
+    renderAllNodes(circle_svg, p_circle_config);
+  }
 
 }

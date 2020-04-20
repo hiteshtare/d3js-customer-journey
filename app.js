@@ -23,6 +23,9 @@ renderAllNodes(circleA_svg, circleA_config);
 
 //To render graph legends
 renderLegends(circleA_svg, circleA_config);
+
+//To handles sliders for Circle A
+rangeSliderForNodes(circleA_svg, circleA_config);
 //================================CIRCLE A================================//
 //================================CIRCLE B================================//
 //Config  for Circle B - Nodes Count
