@@ -1,51 +1,54 @@
-//Center for Circle A
-const circleA_originX = 300;
-const circleA_originY = 300;
 //Config  for Circle A - Nodes Count
-const circleA_config = Object.freeze({
+const circleA_config = Object({
   Meeting: 5,
   Facebook: 10,
   Email: 11,
-  SMS: 6
+  SMS: 6,
+  Text: 'Alan Kaufman',
+  originX: 300,
+  originY: 300,
+  raduis: 0,
+  nodeOriginX: 0,
+  nodeOriginY: 0
 });
-const circleA_radius = calculateRadius(circleA_config); //Raduis for Circle A
-const circleA_text = "Alan Kaufman";
+//Calculate raduis for Circle A
+circleA_config.raduis = calculateRadius(circleA_config);
+//Calculate Node Origin for Circle A
+circleA_config.nodeOriginX = circleA_config.originX + ((circleA_config.raduis) * Math.sin(0));
+circleA_config.nodeOriginY = circleA_config.originY - ((circleA_config.raduis) * Math.cos(0));
 
+//Container for Circle A
 const circleA_svg = d3.select("#viz")
   .append("svg")
   .attr("width", 1000)
   .attr("height", 1000);
-
+//Create dash circumference for Circle A
 circleA_svg.append("g").append("circle").attr({
-  cx: circleA_originX,
-  cy: circleA_originY,
+  cx: circleA_config.originX,
+  cy: circleA_config.originY,
   opacity: 100,
-  r: circleA_radius,
+  r: circleA_config.raduis,
   fill: "none"
   // to set color for Dash-Circumference 
 }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
-
+//Add text at the center
 circleA_svg.append("text")
-  .attr("x", circleA_originX)
-  .attr("y", circleA_originY)
+  .attr("x", circleA_config.originX)
+  .attr("y", circleA_config.originY)
   .attr("text-anchor", "middle")
   .style("font-size", "20px")
-  .text(circleA_text);
+  .text(circleA_config.Text);
 
-var nodeOriginX = circleA_originX + ((circleA_radius) * Math.sin(0));
-var nodeOriginY = circleA_originY - ((circleA_radius) * Math.cos(0));
 
-renderEmailNodes(circleA_svg, circleA_config, nodeOriginX, nodeOriginY);
-renderFacebookNodes(circleA_svg, circleA_config, nodeOriginX, nodeOriginY);
-renderMeetingNodes(circleA_svg, circleA_config, nodeOriginX, nodeOriginY);
-renderSMSNodes(circleA_svg, circleA_config, nodeOriginX, nodeOriginY);
-
-// randomA1.attr("transform", "rotate(160, 300, 300)");
+renderEmailNodes(circleA_svg, circleA_config);
+renderFacebookNodes(circleA_svg, circleA_config);
+renderMeetingNodes(circleA_svg, circleA_config);
+renderSMSNodes(circleA_svg, circleA_config);
 
 
 var emailLabel = circleA_svg.append("circle").attr({
-  cx: nodeOriginX - 120,
-  cy: nodeOriginY - 65,
+  cx: circleA_config.nodeOriginX - 120,
+  cy: circleA_config.nodeOriginY - 65,
   opacity: 100,
   r: 5,
   fill: "orange"
@@ -59,8 +62,8 @@ circleA_svg.append("text")
   .text(`Email`);
 
 var fbLabel = circleA_svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY - 65,
+  cx: circleA_config.nodeOriginX,
+  cy: circleA_config.nodeOriginY - 65,
   opacity: 100,
   r: 5,
   fill: "#3b5998"
@@ -74,8 +77,8 @@ circleA_svg.append("text")
   .text("Facebook Message");
 
 var meetingLabel = circleA_svg.append("circle").attr({
-  cx: nodeOriginX - 120,
-  cy: nodeOriginY - 45,
+  cx: circleA_config.nodeOriginX - 120,
+  cy: circleA_config.nodeOriginY - 45,
   opacity: 100,
   r: 5,
   fill: "#5BC236"
@@ -89,8 +92,8 @@ circleA_svg.append("text")
   .text("Meeting");
 
 var smsLabel = circleA_svg.append("circle").attr({
-  cx: nodeOriginX,
-  cy: nodeOriginY - 45,
+  cx: circleA_config.nodeOriginX,
+  cy: circleA_config.nodeOriginY - 45,
   opacity: 100,
   r: 5,
   fill: "black"
@@ -107,8 +110,8 @@ circleA_svg.append("text")
 
 /*
 var randomLabel = circleA_svg.append("rect").attr({
-    x: nodeOriginX,
-    y: nodeOriginY-5,
+    x: circleA_config.nodeOriginX,
+    y: circleA_config.nodeOriginY-5,
     width: 10,
     height: 10,
     opacity: 100,
