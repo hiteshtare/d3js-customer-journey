@@ -11,7 +11,8 @@ const circleA_config = Object({
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
-  nodeOriginY: 0
+  nodeOriginY: 0,
+  totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle A
 calculateRadius_NodeOrigin(circleA_config);
@@ -26,17 +27,18 @@ renderLegends(circleA_svg, circleA_config);
 //================================CIRCLE B================================//
 //Config  for Circle B - Nodes Count
 const circleB_config = Object({
-  Meeting: 3,
-  Facebook: 4,
-  Email: 5,
-  SMS: 6,
+  Meeting: 5,
+  Facebook: 6,
+  Email: 6,
+  SMS: 15,
   Text: 'Segment B',
   originX: 300,
   originY: 300,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
-  nodeOriginY: 0
+  nodeOriginY: 0,
+  totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle B
 calculateRadius_NodeOrigin(circleB_config);
@@ -49,17 +51,18 @@ renderAllNodes(circleB_svg, circleB_config);
 //================================CIRCLE C================================//
 //Config for Circle C - Nodes Count
 const circleC_config = Object({
-  Meeting: 13,
-  Facebook: 4,
-  Email: 15,
-  SMS: 16,
+  Meeting: 10,
+  Facebook: 11,
+  Email: 6,
+  SMS: 5,
   Text: 'Segment C',
   originX: 300,
   originY: 300,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
-  nodeOriginY: 0
+  nodeOriginY: 0,
+  totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle C
 calculateRadius_NodeOrigin(circleC_config);

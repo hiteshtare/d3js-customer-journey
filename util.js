@@ -39,6 +39,11 @@ function calculateRadius_NodeOrigin(p_circle_config) {
 
   p_circle_config.nodeOriginX = p_circle_config.originX + ((p_circle_config.raduis) * Math.sin(0));
   p_circle_config.nodeOriginY = p_circle_config.originY - ((p_circle_config.raduis) * Math.cos(0));
+
+  p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
+    p_circle_config.Email + p_circle_config.SMS;
+
+  console.warn(`Total Nodes: ${p_circle_config.totalNodes}`);
 }
 
 function renderCircle(p_circle_config) {
