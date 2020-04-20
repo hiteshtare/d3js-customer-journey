@@ -33,6 +33,34 @@ function calculateRadius(p_circle_config) {
   return raduis;
 }
 
+function renderCircle(containerId, p_circle_config) {
+  //Container for Circle A
+  let circleA_svg =
+    d3.select(`${containerId}`)
+    .append("svg")
+    .attr("width", 1000)
+    .attr("height", 1000);
+
+  //Create dash circumference for Circle A
+  circleA_svg.append("g").append("circle").attr({
+    cx: p_circle_config.originX,
+    cy: p_circle_config.originY,
+    opacity: 100,
+    r: p_circle_config.raduis,
+    fill: "none"
+    // to set color for Dash-Circumference 
+  }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
+  //Add text at the center
+  circleA_svg.append("text")
+    .attr("x", p_circle_config.originX)
+    .attr("y", p_circle_config.originY)
+    .attr("text-anchor", "middle")
+    .style("font-size", "20px")
+    .text(p_circle_config.Text);
+
+  return circleA_svg;
+}
+
 function renderEmailNodes(p_circle_svg, p_circle_config) {
   console.warn(`renderEmailNodes :${p_circle_config.Email}`);
 

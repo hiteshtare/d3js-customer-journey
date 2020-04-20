@@ -18,26 +18,7 @@ circleA_config.nodeOriginX = circleA_config.originX + ((circleA_config.raduis) *
 circleA_config.nodeOriginY = circleA_config.originY - ((circleA_config.raduis) * Math.cos(0));
 
 //Container for Circle A
-const circleA_svg = d3.select("#viz")
-  .append("svg")
-  .attr("width", 1000)
-  .attr("height", 1000);
-//Create dash circumference for Circle A
-circleA_svg.append("g").append("circle").attr({
-  cx: circleA_config.originX,
-  cy: circleA_config.originY,
-  opacity: 100,
-  r: circleA_config.raduis,
-  fill: "none"
-  // to set color for Dash-Circumference 
-}).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
-//Add text at the center
-circleA_svg.append("text")
-  .attr("x", circleA_config.originX)
-  .attr("y", circleA_config.originY)
-  .attr("text-anchor", "middle")
-  .style("font-size", "20px")
-  .text(circleA_config.Text);
+const circleA_svg = renderCircle("#viz", circleA_config);
 
 renderEmailNodes(circleA_svg, circleA_config);
 renderFacebookNodes(circleA_svg, circleA_config);
