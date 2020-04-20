@@ -33,11 +33,11 @@ function calculateRadius(p_circle_config) {
   return raduis;
 }
 
-function renderEmailNodes(p_circleA_svg, p_circle_config) {
+function renderEmailNodes(p_circle_svg, p_circle_config) {
   console.warn(`renderEmailNodes :${p_circle_config.Email}`);
 
   for (let index = 0; index < p_circle_config.Email; index++) {
-    let email = p_circleA_svg.append("circle").attr({
+    let email = p_circle_svg.append("circle").attr({
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
@@ -53,15 +53,15 @@ function renderEmailNodes(p_circleA_svg, p_circle_config) {
     }
   }
 
-  return p_circleA_svg;
+  return p_circle_svg;
 }
 
-function renderFacebookNodes(p_circleA_svg, p_circle_config) {
+function renderFacebookNodes(p_circle_svg, p_circle_config) {
   console.warn(`renderFacebookNodes :${p_circle_config.Facebook}`);
 
   for (let index = 0; index < p_circle_config.Facebook; index++) {
 
-    let facebook = p_circleA_svg.append("circle").attr({
+    let facebook = p_circle_svg.append("circle").attr({
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
@@ -75,15 +75,15 @@ function renderFacebookNodes(p_circleA_svg, p_circle_config) {
     facebook.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
-  return p_circleA_svg;
+  return p_circle_svg;
 }
 
-function renderMeetingNodes(p_circleA_svg, p_circle_config) {
+function renderMeetingNodes(p_circle_svg, p_circle_config) {
   console.warn(`renderMeetingNodes :${p_circle_config.Meeting}`);
 
   for (let index = 0; index < p_circle_config.Meeting; index++) {
 
-    let meeting = p_circleA_svg.append("circle").attr({
+    let meeting = p_circle_svg.append("circle").attr({
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
@@ -97,15 +97,15 @@ function renderMeetingNodes(p_circleA_svg, p_circle_config) {
     meeting.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
-  return p_circleA_svg;
+  return p_circle_svg;
 }
 
-function renderSMSNodes(p_circleA_svg, p_circle_config) {
+function renderSMSNodes(p_circle_svg, p_circle_config) {
   console.warn(`renderSMSNodes :${p_circle_config.SMS}`);
 
   for (let index = 0; index < p_circle_config.SMS; index++) {
 
-    let sms = p_circleA_svg.append("circle").attr({
+    let sms = p_circle_svg.append("circle").attr({
       cx: p_circle_config.nodeOriginX,
       cy: p_circle_config.nodeOriginY,
       opacity: 100,
@@ -119,5 +119,71 @@ function renderSMSNodes(p_circleA_svg, p_circle_config) {
     sms.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
-  return p_circleA_svg;
+  return p_circle_svg;
+}
+
+function renderLegends(p_circle_svg, p_circle_config) {
+  //---------------------EMAIL---------------------//
+  p_circle_svg.append("circle").attr({
+    cx: p_circle_config.nodeOriginX - 120,
+    cy: p_circle_config.nodeOriginY - 65,
+    opacity: 100,
+    r: Nodes.Raduis,
+    fill: Nodes.Email.color
+  });
+  p_circle_svg.append("text")
+    .attr("x", 210)
+    .attr("y", 40)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text(`Email`);
+  //---------------------EMAIL---------------------//
+
+  //---------------------FACEBOOK---------------------//
+  p_circle_svg.append("circle").attr({
+    cx: p_circle_config.nodeOriginX,
+    cy: p_circle_config.nodeOriginY - 65,
+    opacity: 100,
+    r: Nodes.Raduis,
+    fill: Nodes.Facebook.color
+  });
+  p_circle_svg.append("text")
+    .attr("x", 375)
+    .attr("y", 40)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text("Facebook Message");
+  //---------------------FACEBOOK---------------------//
+
+  //---------------------MEETING---------------------//
+  p_circle_svg.append("circle").attr({
+    cx: p_circle_config.nodeOriginX - 120,
+    cy: p_circle_config.nodeOriginY - 45,
+    opacity: 100,
+    r: Nodes.Raduis,
+    fill: Nodes.Meeting.color
+  });
+  p_circle_svg.append("text")
+    .attr("x", 217)
+    .attr("y", 60)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text("Meeting");
+  //---------------------MEETING---------------------//
+
+  //---------------------SMS---------------------//
+  p_circle_svg.append("circle").attr({
+    cx: p_circle_config.nodeOriginX,
+    cy: p_circle_config.nodeOriginY - 45,
+    opacity: 100,
+    r: Nodes.Raduis,
+    fill: Nodes.SMS.color
+  });
+  p_circle_svg.append("text")
+    .attr("x", 330)
+    .attr("y", 60)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text("SMS");
+  //---------------------SMS---------------------//
 }

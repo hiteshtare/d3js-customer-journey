@@ -39,75 +39,12 @@ circleA_svg.append("text")
   .style("font-size", "20px")
   .text(circleA_config.Text);
 
-
 renderEmailNodes(circleA_svg, circleA_config);
 renderFacebookNodes(circleA_svg, circleA_config);
 renderMeetingNodes(circleA_svg, circleA_config);
 renderSMSNodes(circleA_svg, circleA_config);
 
-
-var emailLabel = circleA_svg.append("circle").attr({
-  cx: circleA_config.nodeOriginX - 120,
-  cy: circleA_config.nodeOriginY - 65,
-  opacity: 100,
-  r: 5,
-  fill: "orange"
-});
-
-circleA_svg.append("text")
-  .attr("x", 210)
-  .attr("y", 40)
-  .attr("text-anchor", "middle")
-  .style("font-size", "16px")
-  .text(`Email`);
-
-var fbLabel = circleA_svg.append("circle").attr({
-  cx: circleA_config.nodeOriginX,
-  cy: circleA_config.nodeOriginY - 65,
-  opacity: 100,
-  r: 5,
-  fill: "#3b5998"
-});
-
-circleA_svg.append("text")
-  .attr("x", 375)
-  .attr("y", 40)
-  .attr("text-anchor", "middle")
-  .style("font-size", "16px")
-  .text("Facebook Message");
-
-var meetingLabel = circleA_svg.append("circle").attr({
-  cx: circleA_config.nodeOriginX - 120,
-  cy: circleA_config.nodeOriginY - 45,
-  opacity: 100,
-  r: 5,
-  fill: "#5BC236"
-});
-
-circleA_svg.append("text")
-  .attr("x", 217)
-  .attr("y", 60)
-  .attr("text-anchor", "middle")
-  .style("font-size", "16px")
-  .text("Meeting");
-
-var smsLabel = circleA_svg.append("circle").attr({
-  cx: circleA_config.nodeOriginX,
-  cy: circleA_config.nodeOriginY - 45,
-  opacity: 100,
-  r: 5,
-  fill: "black"
-});
-
-circleA_svg.append("text")
-  .attr("x", 330)
-  .attr("y", 60)
-  .attr("text-anchor", "middle")
-  .style("font-size", "16px")
-  .text("SMS");
-
-
-
+renderLegends(circleA_svg, circleA_config);
 /*
 var randomLabel = circleA_svg.append("rect").attr({
     x: circleA_config.nodeOriginX,
