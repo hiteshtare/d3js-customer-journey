@@ -7,8 +7,26 @@
 <body>
 	<div id="viz"></div>
 	<div class="slidecontainer">
-		<input type="range" min="1" max="25" value="10" class="slider" id="rangeEmail">
-		<p>Emails: <span id="spanEmail"></span></p>
+		<div class="row">
+			<div class="column">
+				<p>Email: <span id="spanEmail"></span></p>
+				<input type="range" min="1" max="25" value="10" class="slider rangeEmail" id="rangeEmail">
+			</div>
+			<div class="column">
+				<p>Facebook: <span id="spanFacebook"></span></p>
+				<input type="range" min="1" max="25" value="10" class="slider rangeFacebook" id="rangeFacebook">
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<p>Meeting: <span id="spanMeeting"></span></p>
+				<input type="range" min="1" max="25" value="10" class="slider rangeMeeting" id="rangeMeeting">
+			</div>
+			<div class="column">
+				<p>SMS: <span id="spanSMS"></span></p>
+				<input type="range" min="1" max="25" value="10" class="slider rangeSMS" id="rangeSMS">
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="util.js"></script>
 
@@ -16,7 +34,23 @@
 
 	<style type="text/css">
 		.slidecontainer {
-			width: 300px;
+			width: 700px;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 48%;
+			padding: 2px;
+			height: 50px;
+			/* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
 		}
 
 		.slider {
@@ -41,7 +75,6 @@
 			width: 15px;
 			height: 15px;
 			border-radius: 50%;
-			background: orange;
 			cursor: pointer;
 		}
 
@@ -51,6 +84,38 @@
 			border-radius: 50%;
 			background: orange;
 			cursor: pointer;
+		}
+
+		.rangeEmail::-webkit-slider-thumb {
+			background: orange;
+		}
+
+		.rangeEmail::-moz-range-thumb {
+			background: orange;
+		}
+
+		.rangeFacebook::-webkit-slider-thumb {
+			background: #3b5998;
+		}
+
+		.rangeFacebook::-moz-range-thumb {
+			background: #3b5998;
+		}
+
+		.rangeMeeting::-webkit-slider-thumb {
+			background: #5BC236;
+		}
+
+		.rangeMeeting::-moz-range-thumb {
+			background: #5BC236;
+		}
+
+		.rangeSMS::-webkit-slider-thumb {
+			background: black;
+		}
+
+		.rangeSMS::-moz-range-thumb {
+			background: black;
 		}
 	</style>
 </body>

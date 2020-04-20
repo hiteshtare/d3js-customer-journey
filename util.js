@@ -256,12 +256,15 @@ function renderAllNodes(p_circle_svg, p_circle_config) {
 function rangeSliderForNodes(circle_svg, p_circle_config) {
   console.warn(`rangeSliderForNodes`);
 
+  //---------------------EMAIL---------------------//
   var sliderRange_Email = document.getElementById("rangeEmail");
   var spanEmail = document.getElementById("spanEmail");
   spanEmail.innerHTML = sliderRange_Email.value;
   spanEmail.innerHTML = `` + p_circle_config.Email;
 
   sliderRange_Email.oninput = function () {
+    console.log(`Range Slider for Email is updated`);
+
     //Assigned slider value for DOM
     spanEmail.innerHTML = this.value;
 
@@ -284,5 +287,104 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
       renderAllNodes(circleA_svg, p_circle_config);
     }
   }
+  //---------------------EMAIL---------------------//
 
+  //---------------------FACEBOOK---------------------//
+  var sliderRange_Facebook = document.getElementById("rangeFacebook");
+  var spanFacebook = document.getElementById("spanFacebook");
+  spanFacebook.innerHTML = sliderRange_Facebook.value;
+  spanFacebook.innerHTML = `` + p_circle_config.Facebook;
+
+  sliderRange_Facebook.oninput = function () {
+    console.log(`Range Slider for Facebook is updated`);
+
+    //Assigned slider value for DOM
+    spanFacebook.innerHTML = this.value;
+
+    //To check if slider value is greater than current config value for Email
+    // then add new node in the existing SVG
+    if (+this.value >= p_circle_config.Facebook) {
+      //Update value for email in Circle Config
+      p_circle_config.Facebook = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circle_svg, p_circle_config);
+    } else {
+      // To remove all nodes for the current SVG circle
+      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
+      // To render circle if it does not exists in DOM
+      const circleA_svg = renderCircle(p_circle_config);
+
+      //Update value for email in Circle Config
+      p_circle_config.Facebook = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circleA_svg, p_circle_config);
+    }
+  }
+  //---------------------FACEBOOK---------------------//
+
+  //---------------------MEETING---------------------//
+  var sliderRange_Meeting = document.getElementById("rangeMeeting");
+  var spanMeeting = document.getElementById("spanMeeting");
+  spanMeeting.innerHTML = sliderRange_Meeting.value;
+  spanMeeting.innerHTML = `` + p_circle_config.Meeting;
+
+  sliderRange_Meeting.oninput = function () {
+    console.log(`Range Slider for Meeting is updated`);
+
+    //Assigned slider value for DOM
+    spanMeeting.innerHTML = this.value;
+
+    //To check if slider value is greater than current config value for Email
+    // then add new node in the existing SVG
+    if (+this.value >= p_circle_config.Meeting) {
+      //Update value for email in Circle Config
+      p_circle_config.Meeting = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circle_svg, p_circle_config);
+    } else {
+      // To remove all nodes for the current SVG circle
+      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
+      // To render circle if it does not exists in DOM
+      const circleA_svg = renderCircle(p_circle_config);
+
+      //Update value for email in Circle Config
+      p_circle_config.Meeting = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circleA_svg, p_circle_config);
+    }
+  }
+  //---------------------MEETING---------------------//
+
+  //---------------------SMS---------------------//
+  var sliderRange_SMS = document.getElementById("rangeSMS");
+  var spanSMS = document.getElementById("spanSMS");
+  spanSMS.innerHTML = sliderRange_SMS.value;
+  spanSMS.innerHTML = `` + p_circle_config.SMS;
+
+  sliderRange_SMS.oninput = function () {
+    console.log(`Range Slider for SMS is updated`);
+
+    //Assigned slider value for DOM
+    spanSMS.innerHTML = this.value;
+
+    //To check if slider value is greater than current config value for Email
+    // then add new node in the existing SVG
+    if (+this.value >= p_circle_config.SMS) {
+      //Update value for email in Circle Config
+      p_circle_config.SMS = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circle_svg, p_circle_config);
+    } else {
+      // To remove all nodes for the current SVG circle
+      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
+      // To render circle if it does not exists in DOM
+      const circleA_svg = renderCircle(p_circle_config);
+
+      //Update value for email in Circle Config
+      p_circle_config.SMS = +this.value;
+      //Re-render graph for updated values
+      renderAllNodes(circleA_svg, p_circle_config);
+    }
+  }
+  //---------------------SMS---------------------//
 }
