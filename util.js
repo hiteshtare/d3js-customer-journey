@@ -7,7 +7,7 @@ const Weights = Object.freeze({
 });
 // Nodes Config
 const Nodes = {
-  Raduis: 5, // Raduis of the node
+  Raduis: 7, // Raduis of the node
   Meeting: {
     color: `#5BC236`
   },
