@@ -7,6 +7,7 @@ const circleA_config = Object({
   SMS: 6,
   Text: 'Segment A',
   id: 'circleA',
+  url: 'http://stackoverflow.com/',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -27,6 +28,9 @@ renderLegends(circleA_svg, circleA_config);
 
 //To handles sliders for Circle A
 rangeSliderForNodes(circleA_svg, circleA_config);
+
+//To add click event for all Nodes to navigate for Circle A
+addClickEventsforNodes(circleA_config);
 //================================CIRCLE A================================//
 //================================CIRCLE B================================//
 //Config  for Circle B - Nodes Count
@@ -37,6 +41,7 @@ const circleB_config = Object({
   SMS: 15,
   Text: 'Segment B',
   id: 'circleB',
+  url: 'http://stackoverflow.com/',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -62,6 +67,7 @@ const circleC_config = Object({
   SMS: 5,
   Text: 'Segment C',
   id: 'circleC',
+  url: 'http://stackoverflow.com/',
   originX: 300,
   originY: 300,
   //Below values are Calculated

@@ -388,3 +388,18 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
   }
   //---------------------SMS---------------------//
 }
+
+function addClickEventsforNodes(p_circle_config) {
+  console.warn(`addClickEventsforNodes`);
+
+  d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").on("click", function () {
+    var win = window.open(`${p_circle_config.url}`, '_blank');
+    if (win) {
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+      //Browser has blocked it
+      alert('Please allow popups for this website');
+    }
+  });
+}
