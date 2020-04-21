@@ -278,7 +278,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
   //---------------------EMAIL---------------------//
   var sliderRange_Email = document.getElementById("rangeEmail");
   var spanEmail = document.getElementById("spanEmail");
-  spanEmail.innerHTML = sliderRange_Email.value;
+  sliderRange_Email.value = p_circle_config.Email;
   spanEmail.innerHTML = `` + p_circle_config.Email;
 
   sliderRange_Email.oninput = function () {
@@ -311,7 +311,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
   //---------------------FACEBOOK---------------------//
   var sliderRange_Facebook = document.getElementById("rangeFacebook");
   var spanFacebook = document.getElementById("spanFacebook");
-  spanFacebook.innerHTML = sliderRange_Facebook.value;
+  sliderRange_Facebook.value = p_circle_config.Facebook;
   spanFacebook.innerHTML = `` + p_circle_config.Facebook;
 
   sliderRange_Facebook.oninput = function () {
@@ -344,7 +344,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
   //---------------------MEETING---------------------//
   var sliderRange_Meeting = document.getElementById("rangeMeeting");
   var spanMeeting = document.getElementById("spanMeeting");
-  spanMeeting.innerHTML = sliderRange_Meeting.value;
+  sliderRange_Meeting.value = p_circle_config.Meeting;
   spanMeeting.innerHTML = `` + p_circle_config.Meeting;
 
   sliderRange_Meeting.oninput = function () {
@@ -377,7 +377,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
   //---------------------SMS---------------------//
   var sliderRange_SMS = document.getElementById("rangeSMS");
   var spanSMS = document.getElementById("spanSMS");
-  spanSMS.innerHTML = sliderRange_SMS.value;
+  sliderRange_SMS.value = p_circle_config.SMS;
   spanSMS.innerHTML = `` + p_circle_config.SMS;
 
   sliderRange_SMS.oninput = function () {
