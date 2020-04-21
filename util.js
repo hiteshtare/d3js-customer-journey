@@ -98,6 +98,23 @@ function renderCircle(p_circle_config) {
     //Container for Circle
     let circle_svg = d3.select(`#${p_circle_config.id}`);
 
+    //Create dash circumference for Circle
+    circle_svg.append("g").append("circle").attr({
+      cx: p_circle_config.originX,
+      cy: p_circle_config.originY,
+      opacity: 100,
+      r: p_circle_config.raduis,
+      fill: "none"
+      // to set color for Dash-Circumference 
+    }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
+    //Add text at the center
+    circle_svg.append("text")
+      .attr("x", p_circle_config.originX)
+      .attr("y", p_circle_config.originY)
+      .attr("text-anchor", "middle")
+      .style("font-size", "20px")
+      .text(p_circle_config.Text);
+
     return circle_svg;
   }
 }
@@ -286,25 +303,19 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
 
     //Assigned slider value for DOM
     spanEmail.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Email = +this.value;
 
-    //To check if slider value is greater than current config value for Email
-    // then add new node in the existing SVG
-    if (+this.value >= p_circle_config.Email) {
-      //Update value for email in Circle Config
-      p_circle_config.Email = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circle_svg, p_circle_config);
-    } else {
-      // To remove all nodes for the current SVG circle
-      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
-      // To render circle if it does not exists in DOM
-      const circleA_svg = renderCircle(p_circle_config);
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
 
-      //Update value for email in Circle Config
-      p_circle_config.Email = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circleA_svg, p_circle_config);
-    }
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
   }
   //---------------------EMAIL---------------------//
 
@@ -319,25 +330,19 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
 
     //Assigned slider value for DOM
     spanFacebook.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Facebook = +this.value;
 
-    //To check if slider value is greater than current config value for Email
-    // then add new node in the existing SVG
-    if (+this.value >= p_circle_config.Facebook) {
-      //Update value for email in Circle Config
-      p_circle_config.Facebook = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circle_svg, p_circle_config);
-    } else {
-      // To remove all nodes for the current SVG circle
-      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
-      // To render circle if it does not exists in DOM
-      const circleA_svg = renderCircle(p_circle_config);
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
 
-      //Update value for email in Circle Config
-      p_circle_config.Facebook = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circleA_svg, p_circle_config);
-    }
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
   }
   //---------------------FACEBOOK---------------------//
 
@@ -352,25 +357,19 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
 
     //Assigned slider value for DOM
     spanMeeting.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Meeting = +this.value;
 
-    //To check if slider value is greater than current config value for Email
-    // then add new node in the existing SVG
-    if (+this.value >= p_circle_config.Meeting) {
-      //Update value for email in Circle Config
-      p_circle_config.Meeting = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circle_svg, p_circle_config);
-    } else {
-      // To remove all nodes for the current SVG circle
-      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
-      // To render circle if it does not exists in DOM
-      const circleA_svg = renderCircle(p_circle_config);
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
 
-      //Update value for email in Circle Config
-      p_circle_config.Meeting = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circleA_svg, p_circle_config);
-    }
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
   }
   //---------------------MEETING---------------------//
 
@@ -385,25 +384,19 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
 
     //Assigned slider value for DOM
     spanSMS.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.SMS = +this.value;
 
-    //To check if slider value is greater than current config value for Email
-    // then add new node in the existing SVG
-    if (+this.value >= p_circle_config.SMS) {
-      //Update value for email in Circle Config
-      p_circle_config.SMS = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circle_svg, p_circle_config);
-    } else {
-      // To remove all nodes for the current SVG circle
-      d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").remove()
-      // To render circle if it does not exists in DOM
-      const circleA_svg = renderCircle(p_circle_config);
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
 
-      //Update value for email in Circle Config
-      p_circle_config.SMS = +this.value;
-      //Re-render graph for updated values
-      renderAllNodes(circleA_svg, p_circle_config);
-    }
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
   }
   //---------------------SMS---------------------//
 }
