@@ -33,7 +33,7 @@ function calculateRadius_NodeOrigin(p_circle_config) {
   const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
     p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
 
-  console.log(`Raduis: ${raduis}`);
+  console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
 
   p_circle_config.raduis = raduis;
 
@@ -43,7 +43,7 @@ function calculateRadius_NodeOrigin(p_circle_config) {
   p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
     p_circle_config.Email + p_circle_config.SMS;
 
-  console.warn(`Total Nodes: ${p_circle_config.totalNodes}`);
+  console.log(`Total Nodes: ${p_circle_config.totalNodes} for ${p_circle_config.id}`);
 }
 
 function renderCircle(p_circle_config) {
@@ -178,17 +178,18 @@ function renderSMSNodes(p_circle_svg, p_circle_config) {
 }
 
 function renderLegends(p_circle_svg, p_circle_config) {
+  console.warn(`renderLegends`);
   //---------------------EMAIL---------------------//
   p_circle_svg.append("circle").attr({
-    cx: p_circle_config.nodeOriginX - 120,
+    cx: p_circle_config.nodeOriginX - 220,
     cy: p_circle_config.nodeOriginY - 65,
     opacity: 100,
     r: Nodes.Raduis,
     fill: Nodes.Email.color
   });
   p_circle_svg.append("text")
-    .attr("x", 210)
-    .attr("y", 40)
+    .attr("x", (p_circle_config.nodeOriginX + 30) - 220)
+    .attr("y", p_circle_config.nodeOriginY - 60)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text(`Email`);
@@ -196,15 +197,15 @@ function renderLegends(p_circle_svg, p_circle_config) {
 
   //---------------------FACEBOOK---------------------//
   p_circle_svg.append("circle").attr({
-    cx: p_circle_config.nodeOriginX,
+    cx: p_circle_config.nodeOriginX - 150,
     cy: p_circle_config.nodeOriginY - 65,
     opacity: 100,
     r: Nodes.Raduis,
     fill: Nodes.Facebook.color
   });
   p_circle_svg.append("text")
-    .attr("x", 375)
-    .attr("y", 40)
+    .attr("x", (p_circle_config.nodeOriginX + 35) - 110)
+    .attr("y", p_circle_config.nodeOriginY - 60)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text("Facebook Message");
@@ -212,15 +213,15 @@ function renderLegends(p_circle_svg, p_circle_config) {
 
   //---------------------MEETING---------------------//
   p_circle_svg.append("circle").attr({
-    cx: p_circle_config.nodeOriginX - 120,
-    cy: p_circle_config.nodeOriginY - 45,
+    cx: p_circle_config.nodeOriginX,
+    cy: p_circle_config.nodeOriginY - 65,
     opacity: 100,
     r: Nodes.Raduis,
     fill: Nodes.Meeting.color
   });
   p_circle_svg.append("text")
-    .attr("x", 217)
-    .attr("y", 60)
+    .attr("x", p_circle_config.nodeOriginX + 40)
+    .attr("y", p_circle_config.nodeOriginY - 60)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text("Meeting");
@@ -228,15 +229,15 @@ function renderLegends(p_circle_svg, p_circle_config) {
 
   //---------------------SMS---------------------//
   p_circle_svg.append("circle").attr({
-    cx: p_circle_config.nodeOriginX,
-    cy: p_circle_config.nodeOriginY - 45,
+    cx: p_circle_config.nodeOriginX + 100,
+    cy: p_circle_config.nodeOriginY - 65,
     opacity: 100,
     r: Nodes.Raduis,
     fill: Nodes.SMS.color
   });
   p_circle_svg.append("text")
-    .attr("x", 330)
-    .attr("y", 60)
+    .attr("x", p_circle_config.nodeOriginX + 130)
+    .attr("y", p_circle_config.nodeOriginY - 60)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text("SMS");
@@ -244,7 +245,7 @@ function renderLegends(p_circle_svg, p_circle_config) {
 }
 
 function renderAllNodes(p_circle_svg, p_circle_config) {
-  console.warn(`renderAllNodes`);
+  console.warn(`renderAllNodes for ${p_circle_config.id}`);
 
   renderEmailNodes(p_circle_svg, p_circle_config);
   renderFacebookNodes(p_circle_svg, p_circle_config);

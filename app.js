@@ -2,9 +2,9 @@
 //Config  for Circle A - Nodes Count
 const circleA_config = Object({
   Meeting: 5,
-  Facebook: 10,
-  Email: 11,
-  SMS: 6,
+  Facebook: 5,
+  Email: 5,
+  SMS: 36,
   Text: 'Segment A',
   id: 'circleA',
   url: 'http://stackoverflow.com/',
