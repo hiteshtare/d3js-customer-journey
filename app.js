@@ -6,7 +6,7 @@ const circleA_config = Object({
   Email: 5,
   SMS: 36,
   Text: 'Segment A',
-  id: 'circleA',
+  id: 'absoluteCircleA',
   url: 'http://stackoverflow.com/',
   originX: 300,
   originY: 300,
@@ -17,7 +17,7 @@ const circleA_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle A
-calculateRadius_NodeOrigin(circleA_config);
+calculateRadius_NodeOriginForAbsolute(circleA_config);
 //Container for Circle A
 const circleA_svg = renderCircle(circleA_config);
 
@@ -51,7 +51,7 @@ const circleB_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle B
-calculateRadius_NodeOrigin(circleB_config);
+calculateRadius_NodeOrigin(circleA_config, circleB_config);
 //Container for Circle B
 const circleB_svg = renderCircle(circleB_config);
 
@@ -64,7 +64,7 @@ const circleC_config = Object({
   Meeting: 10,
   Facebook: 11,
   Email: 6,
-  SMS: 5,
+  SMS: 10,
   Text: 'Segment C',
   id: 'circleC',
   url: 'http://stackoverflow.com/',
@@ -77,7 +77,7 @@ const circleC_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle C
-calculateRadius_NodeOrigin(circleC_config);
+calculateRadius_NodeOrigin(circleA_config, circleC_config);
 //Container for Circle C
 const circleC_svg = renderCircle(circleC_config);
 
