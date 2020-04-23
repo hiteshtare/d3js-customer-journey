@@ -11,21 +11,21 @@
 	<div class="slidecontainer">
 		<div class="row">
 			<div class="column">
-				<p>Email: <span id="spanEmail"></span></p>
+				<p class="pSliderLabels">Email: <span id="spanEmail"></span></p>
 				<input type="range" min="1" max="40" value="10" class="slider rangeEmail" id="rangeEmail">
 			</div>
 			<div class="column">
-				<p>Facebook Message: <span id="spanFacebook"></span></p>
+				<p class="pSliderLabels">Facebook Message: <span id="spanFacebook"></span></p>
 				<input type="range" min="1" max="40" value="10" class="slider rangeFacebook" id="rangeFacebook">
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<p>Meeting: <span id="spanMeeting"></span></p>
+				<p class="pSliderLabels">Meeting: <span id="spanMeeting"></span></p>
 				<input type="range" min="1" max="40" value="10" class="slider rangeMeeting" id="rangeMeeting">
 			</div>
 			<div class="column">
-				<p>SMS: <span id="spanSMS"></span></p>
+				<p class="pSliderLabels">SMS: <span id="spanSMS"></span></p>
 				<input type="range" min="1" max="40" value="10" class="slider rangeSMS" id="rangeSMS">
 			</div>
 		</div>
@@ -38,6 +38,10 @@
 		#viz {
 			max-height: 800px;
 			display: inline-flex;
+		}
+
+		.error {
+			color: red;
 		}
 
 		.slidecontainer {

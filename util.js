@@ -22,9 +22,11 @@ const Nodes = {
   }
 };
 let last_Rotate_Value = 0;
+let isMaxBoundary = false;
+
 const svg_config = {
-  width: 600,
-  height: 600
+  width: 650,
+  height: 650
 };
 
 function calculateRadius_NodeOrigin(p_circle_config) {
@@ -121,6 +123,7 @@ function renderEmailNodes(p_circle_svg, p_circle_config) {
     }
   }
 
+  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -144,6 +147,7 @@ function renderFacebookNodes(p_circle_svg, p_circle_config) {
     facebook.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
+  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -167,6 +171,7 @@ function renderMeetingNodes(p_circle_svg, p_circle_config) {
     meeting.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
+  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -188,9 +193,44 @@ function renderSMSNodes(p_circle_svg, p_circle_config) {
     last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
 
     sms.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
+
   }
 
+  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
+}
+
+function renderMaxBoundary(p_circle_svg, p_circle_config) {
+  console.warn(`renderMaxBoundary`);
+  console.debug(`last_Rotate_Value: ${last_Rotate_Value}`);
+
+  if (last_Rotate_Value > 350) {
+    console.warn(`Max boundary`);
+    isMaxBoundary = true;
+
+    //Create dash circumference for Circle
+    p_circle_svg.append("g").append("circle").attr({
+      cx: p_circle_config.originX,
+      cy: p_circle_config.originY,
+      opacity: 100,
+      r: p_circle_config.raduis,
+      fill: "none",
+      id: "boundary"
+      // to set color for Dash-Circumference 
+    }).style("stroke", "red").style("stroke-width", "2px").attr("class", "max-boundary");
+  } else {
+    isMaxBoundary = false;
+  }
+
+  if (isMaxBoundary) {
+    // document.getElementById("rangeEmail").disabled = true;
+    // document.getElementById("rangeFacebook").disabled = true;
+    // document.getElementById("rangeMeeting").disabled = true;
+    // document.getElementById("rangeSMS").disabled = true;
+    $('.pSliderLabels').addClass('error');
+  } else {
+    $('.pSliderLabels').removeClass('error');
+  }
 }
 
 function renderLegends(p_circle_svg, p_circle_config) {
