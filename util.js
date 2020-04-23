@@ -291,7 +291,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+    calculateRadius_NodeOrigin(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
@@ -318,7 +318,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+    calculateRadius_NodeOrigin(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
@@ -345,7 +345,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+    calculateRadius_NodeOrigin(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
@@ -372,7 +372,7 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOriginForAbsolute(p_circle_config);
+    calculateRadius_NodeOrigin(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
