@@ -27,25 +27,7 @@ const svg_config = {
   height: 600
 };
 
-function calculateRadius_NodeOriginForAbsolute(p_circle_config) {
-  console.warn(`calculateRadius_NodeOriginForAbsolute`);
-
-  p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
-    p_circle_config.Email + p_circle_config.SMS;
-
-  console.log(`Total Nodes: ${p_circle_config.totalNodes} for ${p_circle_config.id}`);
-
-  const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
-    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
-
-  p_circle_config.raduis = raduis;
-  console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
-
-  p_circle_config.nodeOriginX = p_circle_config.originX + ((p_circle_config.raduis) * Math.sin(0));
-  p_circle_config.nodeOriginY = p_circle_config.originY - ((p_circle_config.raduis) * Math.cos(0));
-}
-
-function calculateRadius_NodeOrigin(p_abs_circle_config, p_circle_config) {
+function calculateRadius_NodeOrigin(p_circle_config) {
   console.warn(`calculateRadius_NodeOrigin`);
 
   p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
@@ -56,8 +38,7 @@ function calculateRadius_NodeOrigin(p_abs_circle_config, p_circle_config) {
   const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
     p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
 
-  p_circle_config.raduis = (p_circle_config.totalNodes / p_abs_circle_config.totalNodes) *
-    p_abs_circle_config.raduis * 1.25;
+  p_circle_config.raduis = raduis;
   console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
 
   p_circle_config.nodeOriginX = p_circle_config.originX + ((p_circle_config.raduis) * Math.sin(0));

@@ -2,12 +2,12 @@
 //Config  for Circle A - Nodes Count
 const circleA_config = Object({
   Meeting: 5,
-  Facebook: 5,
-  Email: 5,
-  SMS: 36,
+  Facebook: 10,
+  Email: 10,
+  SMS: 6,
   Text: 'Segment A',
-  id: 'absoluteCircleA',
-  url: 'http://stackoverflow.com/',
+  id: 'circleA',
+  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -17,7 +17,7 @@ const circleA_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle A
-calculateRadius_NodeOriginForAbsolute(circleA_config);
+calculateRadius_NodeOrigin(circleA_config);
 //Container for Circle A
 const circleA_svg = renderCircle(circleA_config);
 
@@ -35,13 +35,13 @@ addClickEventsforNodes(circleA_config);
 //================================CIRCLE B================================//
 //Config  for Circle B - Nodes Count
 const circleB_config = Object({
-  Meeting: 5,
-  Facebook: 6,
-  Email: 6,
-  SMS: 15,
+  Meeting: 4,
+  Facebook: 7,
+  Email: 7,
+  SMS: 5,
   Text: 'Segment B',
   id: 'circleB',
-  url: 'http://stackoverflow.com/',
+  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -51,7 +51,7 @@ const circleB_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle B
-calculateRadius_NodeOrigin(circleA_config, circleB_config);
+calculateRadius_NodeOrigin(circleB_config);
 //Container for Circle B
 const circleB_svg = renderCircle(circleB_config);
 
@@ -61,13 +61,13 @@ renderAllNodes(circleB_svg, circleB_config);
 //================================CIRCLE C================================//
 //Config for Circle C - Nodes Count
 const circleC_config = Object({
-  Meeting: 10,
-  Facebook: 11,
-  Email: 6,
-  SMS: 10,
+  Meeting: 2,
+  Facebook: 5,
+  Email: 5,
+  SMS: 3,
   Text: 'Segment C',
   id: 'circleC',
-  url: 'http://stackoverflow.com/',
+  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
   originX: 300,
   originY: 300,
   //Below values are Calculated
@@ -77,7 +77,7 @@ const circleC_config = Object({
   totalNodes: 0
 });
 //Calculate raduis and Node Origin for Circle C
-calculateRadius_NodeOrigin(circleA_config, circleC_config);
+calculateRadius_NodeOrigin(circleC_config);
 //Container for Circle C
 const circleC_svg = renderCircle(circleC_config);
 
