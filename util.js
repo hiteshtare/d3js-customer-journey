@@ -72,7 +72,7 @@ function renderCircle(p_circle_config) {
       .attr("y", p_circle_config.originY)
       .attr("text-anchor", "middle")
       .style("font-size", "20px")
-      .text(p_circle_config.Text);
+      .text(p_circle_config.Text).attr("class", "segment-text");
 
     return circle_svg;
   } else {
@@ -395,4 +395,46 @@ function addClickEventsforNodes(p_circle_config) {
       alert('Please allow popups for this website');
     }
   });
+
+  d3.selectAll(`#${p_circle_config.id}`).selectAll("text.segment-text").on("click", function () {
+    var win = window.open(`customer.html?segment=${p_circle_config.id}`, '_blank');
+    if (win) {
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+      //Browser has blocked it
+      alert('Please allow popups for this website');
+    }
+  });
+}
+
+function renderCircleforCustomer(p_circle_config) {
+  //To remove svgs rendered
+  d3.selectAll(`svg`).remove();
+
+  //Container for Circle
+  let circle_svg =
+    d3.select("#viz")
+    .append("svg")
+    .attr("width", svg_config.width)
+    .attr("height", svg_config.height).attr("id", p_circle_config.id);
+
+  //Create dash circumference for Circle
+  circle_svg.append("g").append("circle").attr({
+    cx: p_circle_config.originX,
+    cy: p_circle_config.originY,
+    opacity: 100,
+    r: p_circle_config.raduis,
+    fill: "none"
+    // to set color for Dash-Circumference 
+  }).style("stroke", "#007fff").style("stroke-dasharray", "5,5");
+  //Add text at the center
+  circle_svg.append("text")
+    .attr("x", p_circle_config.originX)
+    .attr("y", p_circle_config.originY)
+    .attr("text-anchor", "middle")
+    .style("font-size", "20px")
+    .text(p_circle_config.Text).attr("class", "segment-text");
+
+  return circle_svg;
 }

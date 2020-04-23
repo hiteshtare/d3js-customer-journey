@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title>Customer Level</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<body>
+	<p>Select a customer from the list.</p>
+
+	<select id="selCustomer" onchange="renderGraphOnChange()">
+		<option value="customer1">1</option>
+		<option value="customer2">2</option>
+		<option value="customer3">3</option>
+	</select>
+
+	<div id="viz"></div>
+
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="customer.js"></script>
+
+	<style type="text/css">
+		#viz {
+			max-height: 800px;
+			display: inline-flex;
+		}
+
+		select {
+			float: left;
+		}
+	</style>
+</body>
+
+</html>
