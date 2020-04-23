@@ -1,0 +1,2298 @@
+{
+    "Customer_Level": [{
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Meeting",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Meeting",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "C",
+            "Journey_type": "Meeting",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "14",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "15",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "01/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "02/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "03/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "04/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "25",
+            "Segment": "D",
+            "Journey_type": "Meeting",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "Email",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "14",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "15",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "16/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "17/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "18/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "19/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "20/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "21/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "22/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "23/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "25/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "26/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "27/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "28/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "29/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "16/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "17/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "18/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "19/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "20/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "21/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "22/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "23/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "25/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "26/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "Email",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "SMS",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "14",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "15",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "16/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "17/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "18/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "19/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "20/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "21/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "22/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "23/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "25/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "26/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "27/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "28/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "29/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "SMS",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "1",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "2",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "3",
+            "Segment": "A",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "4",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "5",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "6",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "7",
+            "Segment": "B",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "8",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "9",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "10",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "11",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "05/02/2020"
+        },
+        {
+            "Customer ": "12",
+            "Segment": "C",
+            "Journey_type": "FB",
+            "Date": "06/02/2020"
+        },
+        {
+            "Customer ": "13",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "07/02/2020"
+        },
+        {
+            "Customer ": "14",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "08/02/2020"
+        },
+        {
+            "Customer ": "15",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "09/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "10/02/2020"
+        },
+        {
+            "Customer ": "16",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "11/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "12/02/2020"
+        },
+        {
+            "Customer ": "17",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "13/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "14/02/2020"
+        },
+        {
+            "Customer ": "18",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "16/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "17/02/2020"
+        },
+        {
+            "Customer ": "19",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "18/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "19/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "20/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "21/02/2020"
+        },
+        {
+            "Customer ": "20",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "22/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "23/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "25/02/2020"
+        },
+        {
+            "Customer ": "21",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "26/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "27/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "28/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "29/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "15/02/2020"
+        },
+        {
+            "Customer ": "22",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "16/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "17/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "18/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "19/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "20/02/2020"
+        },
+        {
+            "Customer ": "23",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "21/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "22/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "23/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "24/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "25/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "26/02/2020"
+        },
+        {
+            "Customer ": "24",
+            "Segment": "D",
+            "Journey_type": "FB",
+            "Date": "24/02/2020"
+        }
+    ],
+    "Segment_Level": [{
+            "Segment": "A",
+            "Channel": "Meeting",
+            "Frequency": "5"
+        },
+        {
+            "Segment": "A",
+            "Channel": "Email",
+            "Frequency": "10"
+        },
+        {
+            "Segment": "A",
+            "Channel": "SMS",
+            "Frequency": "6"
+        },
+        {
+            "Segment": "A",
+            "Channel": "Facebook Message",
+            "Frequency": "10"
+        },
+        {
+            "Segment": "B",
+            "Channel": "Meeting",
+            "Frequency": "4"
+        },
+        {
+            "Segment": "B",
+            "Channel": "Email",
+            "Frequency": "7"
+        },
+        {
+            "Segment": "B",
+            "Channel": "SMS",
+            "Frequency": "5"
+        },
+        {
+            "Segment": "B",
+            "Channel": "Facebook Message",
+            "Frequency": "7"
+        },
+        {
+            "Segment": "C",
+            "Channel": "Meeting",
+            "Frequency": "2"
+        },
+        {
+            "Segment": "C",
+            "Channel": "Email",
+            "Frequency": "5"
+        },
+        {
+            "Segment": "C",
+            "Channel": "SMS",
+            "Frequency": "3"
+        },
+        {
+            "Segment": "C",
+            "Channel": "Facebook Message",
+            "Frequency": "5"
+        },
+        {
+            "Segment": "D",
+            "Channel": "Meeting",
+            "Frequency": "1"
+        },
+        {
+            "Segment": "D",
+            "Channel": "Email",
+            "Frequency": "3"
+        },
+        {
+            "Segment": "D",
+            "Channel": "SMS",
+            "Frequency": "2"
+        },
+        {
+            "Segment": "D",
+            "Channel": "Facebook Message",
+            "Frequency": "3"
+        }
+    ]
+}
