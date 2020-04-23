@@ -89,5 +89,8 @@ circles_config.forEach((circle_config, index) => {
 
     //To add click event for all Nodes to navigate for Circle A
     addClickEventsforNodes(circle_config);
+
+    //To add max red boundary for Circle A
+    renderRedCircle(circle_svg, circle_config);
   }
 });

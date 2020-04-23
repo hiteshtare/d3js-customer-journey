@@ -37,8 +37,8 @@ function calculateRadius_NodeOrigin(p_circle_config) {
 
   console.log(`Total Nodes: ${p_circle_config.totalNodes} for ${p_circle_config.id}`);
 
-  const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
-    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
+  const raduis = (p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
+    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS) / 2;
 
   p_circle_config.raduis = raduis;
   console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
@@ -123,7 +123,6 @@ function renderEmailNodes(p_circle_svg, p_circle_config) {
     }
   }
 
-  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -147,7 +146,6 @@ function renderFacebookNodes(p_circle_svg, p_circle_config) {
     facebook.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
-  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -171,7 +169,6 @@ function renderMeetingNodes(p_circle_svg, p_circle_config) {
     meeting.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
   }
 
-  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -196,7 +193,6 @@ function renderSMSNodes(p_circle_svg, p_circle_config) {
 
   }
 
-  renderMaxBoundary(p_circle_svg, p_circle_config);
   return p_circle_svg;
 }
 
@@ -207,30 +203,19 @@ function renderMaxBoundary(p_circle_svg, p_circle_config) {
   if (last_Rotate_Value > 350) {
     console.warn(`Max boundary`);
     isMaxBoundary = true;
-
-    //Create dash circumference for Circle
-    p_circle_svg.append("g").append("circle").attr({
-      cx: p_circle_config.originX,
-      cy: p_circle_config.originY,
-      opacity: 100,
-      r: p_circle_config.raduis,
-      fill: "none",
-      id: "boundary"
-      // to set color for Dash-Circumference 
-    }).style("stroke", "red").style("stroke-width", "2px").attr("class", "max-boundary");
   } else {
     isMaxBoundary = false;
   }
 
+  const redCircle = document.getElementById('max-boundary');
+
   if (isMaxBoundary) {
-    // document.getElementById("rangeEmail").disabled = true;
-    // document.getElementById("rangeFacebook").disabled = true;
-    // document.getElementById("rangeMeeting").disabled = true;
-    // document.getElementById("rangeSMS").disabled = true;
-    $('.pSliderLabels').addClass('error');
+    redCircle.style.display = 'block';
   } else {
-    $('.pSliderLabels').removeClass('error');
+    redCircle.style.display = 'none';
   }
+
+
 }
 
 function renderLegends(p_circle_svg, p_circle_config) {
@@ -337,6 +322,8 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
     renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
   //---------------------EMAIL---------------------//
 
@@ -364,6 +351,8 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
     renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
   //---------------------FACEBOOK---------------------//
 
@@ -391,6 +380,8 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
     renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
   //---------------------MEETING---------------------//
 
@@ -418,6 +409,8 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
     renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
   //---------------------SMS---------------------//
 }
@@ -477,4 +470,30 @@ function renderCircleforCustomer(p_circle_config) {
     .text(p_circle_config.Text).attr("class", "segment-text");
 
   return circle_svg;
+}
+
+function renderRedCircle(circle_svg, p_circle_config) {
+  //Create dash circumference for Circle
+  circle_svg.append("g").append("circle").attr({
+    cx: p_circle_config.originX,
+    cy: p_circle_config.originY,
+    opacity: 100,
+    r: 120,
+    fill: "none",
+    id: "max-boundary"
+    // to set color for Dash-Circumference 
+  }).style("display", "none").style("stroke", "red").style("stroke-width", "2px").style("stroke-dasharray", "5,5");
+}
+
+function renderSettingsforCircleA(circle_svg, circle_config) {
+  //To handles sliders for Circle A
+  rangeSliderForNodes(circle_svg, circle_config);
+
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforNodes(circle_config);
+
+  //To add max red boundary for Circle A
+  renderRedCircle(circle_svg, circle_config);
+
+  renderMaxBoundary(circle_svg, circle_config)
 }
