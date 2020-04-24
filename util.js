@@ -37,8 +37,8 @@ function calculateRadius_NodeOrigin(p_circle_config) {
 
   console.log(`Total Nodes: ${p_circle_config.totalNodes} for ${p_circle_config.id}`);
 
-  const raduis = (p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
-    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS) / 2;
+  const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
+    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
 
   p_circle_config.raduis = raduis;
   console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
@@ -56,8 +56,8 @@ function renderCircle(p_circle_config) {
     let circle_svg =
       d3.select("#viz")
       .append("svg")
-      .attr("width", svg_config.width)
-      .attr("height", svg_config.height).attr("id", p_circle_config.id);
+      .attr("width", p_circle_config.svg_width)
+      .attr("height", p_circle_config.svg_height).attr("id", p_circle_config.id);
 
     //Create dash circumference for Circle
     circle_svg.append("g").append("circle").attr({
@@ -449,8 +449,8 @@ function renderCircleforCustomer(p_circle_config) {
   let circle_svg =
     d3.select("#viz")
     .append("svg")
-    .attr("width", svg_config.width)
-    .attr("height", svg_config.height).attr("id", p_circle_config.id);
+    .attr("width", p_circle_config.svg_width)
+    .attr("height", p_circle_config.svg_height).attr("id", p_circle_config.id);
 
   //Create dash circumference for Circle
   circle_svg.append("g").append("circle").attr({
@@ -478,7 +478,7 @@ function renderRedCircle(circle_svg, p_circle_config) {
     cx: p_circle_config.originX,
     cy: p_circle_config.originY,
     opacity: 100,
-    r: 120,
+    r: 250,
     fill: "none",
     id: "max-boundary"
     // to set color for Dash-Circumference 

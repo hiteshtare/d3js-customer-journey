@@ -21,6 +21,8 @@ const circles_config = [{
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
   originX: 300,
   originY: 300,
+  svg_width: 650,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -34,8 +36,10 @@ const circles_config = [{
   Text: 'Segment B',
   id: 'circleB',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 300,
+  originX: 250,
   originY: 300,
+  svg_width: 500,
+  svg_height: 500,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -49,23 +53,10 @@ const circles_config = [{
   Text: 'Segment C',
   id: 'circleC',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 300,
+  originX: 150,
   originY: 300,
-  //Below values are Calculated
-  raduis: 0,
-  nodeOriginX: 0,
-  nodeOriginY: 0,
-  totalNodes: 0
-}, {
-  Meeting: 1,
-  Facebook: 3,
-  Email: 3,
-  SMS: 2,
-  Text: 'Segment D',
-  id: 'circleD',
-  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 300,
-  originY: 300,
+  svg_width: 400,
+  svg_height: 400,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
