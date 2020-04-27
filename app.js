@@ -36,7 +36,7 @@ const circles_config = [{
   Text: 'Segment B',
   id: 'circleB',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 250,
+  originX: 300,
   originY: 300,
   svg_width: 650,
   svg_height: 650,
@@ -53,7 +53,7 @@ const circles_config = [{
   Text: 'Segment C',
   id: 'circleC',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 150,
+  originX: 300,
   originY: 300,
   svg_width: 650,
   svg_height: 650,
@@ -94,4 +94,13 @@ function renderGraphOnChange() {
   const circle_svg = renderCircleforCustomer(filtered_config);
   //Render all Node types
   renderAllNodes(circle_svg, filtered_config)
+
+  //To handles sliders for Circle A
+  rangeSliderForNodes(circle_svg, filtered_config);
+
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforNodes(filtered_config);
+
+  //To add max red boundary for Circle A
+  renderRedCircle(circle_svg, filtered_config);
 }
