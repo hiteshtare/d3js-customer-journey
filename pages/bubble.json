@@ -4,6 +4,7 @@
     "name": "Segment Level",
     "children": [{
       "name": "Segment A",
+      "id": "circleA",
       "children": [{
         "name": "Customer 1",
         "children": [{
@@ -64,6 +65,7 @@
       }]
     }, {
       "name": "Segment B",
+      "id": "circleB",
       "children": [{
         "name": "Customer 4",
         "children": [{
@@ -143,6 +145,7 @@
       }]
     }, {
       "name": "Segment C",
+      "id": "circleC",
       "children": [{
         "name": "Customer 8",
         "children": [{
