@@ -84,6 +84,9 @@ circles_config.forEach((circle_config, index) => {
 
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);
+
+    //To add click event for Center Text navigation to Customer View
+    addClickEventsforCenterText(circle_config);
   }
 });
 
@@ -97,4 +100,7 @@ function renderSliderOnChange() {
 
   //To handles sliders for Circle
   rangeSliderForNodes(circle_svg, filtered_config);
+
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforNodes(filtered_config);
 }

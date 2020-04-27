@@ -54,7 +54,7 @@ const customer_config = [{
 //Calculate raduis and Node Origin for Circle A
 calculateRadius_NodeOrigin(customer_config[0]);
 //Container for Circle A
-const circle_svg = renderCircle(customer_config[0]);
+const circle_svg = renderCircleforCustomer(customer_config[0]);
 //Render all Node types
 renderAllNodes(circle_svg, customer_config[0])
 

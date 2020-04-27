@@ -72,8 +72,6 @@ function renderCircle(p_circle_config) {
     circle_svg.append("text")
       .attr("x", p_circle_config.originX)
       .attr("y", p_circle_config.originY)
-      .attr("text-anchor", "middle")
-      .style("font-size", "20px")
       .text(p_circle_config.Text).attr("class", "segment-text");
 
     return circle_svg;
@@ -94,9 +92,7 @@ function renderCircle(p_circle_config) {
     circle_svg.append("text")
       .attr("x", p_circle_config.originX)
       .attr("y", p_circle_config.originY)
-      .attr("text-anchor", "middle")
-      .style("font-size", "20px")
-      .text(p_circle_config.Text);
+      .text(p_circle_config.Text).attr("class", "segment-text");
 
     return circle_svg;
   }
@@ -428,6 +424,10 @@ function addClickEventsforNodes(p_circle_config) {
       alert('Please allow popups for this website');
     }
   });
+}
+
+function addClickEventsforCenterText(p_circle_config) {
+  console.warn(`addClickEventsforCenterText`);
 
   d3.selectAll(`#${p_circle_config.id}`).selectAll("text.segment-text").on("click", function () {
     var win = window.open(`pages/customer.html?segment=${p_circle_config.id}`, '_self');
@@ -467,7 +467,7 @@ function renderCircleforCustomer(p_circle_config) {
     .attr("y", p_circle_config.originY)
     .attr("text-anchor", "middle")
     .style("font-size", "20px")
-    .text(p_circle_config.Text).attr("class", "segment-text");
+    .text(p_circle_config.Text);
 
   return circle_svg;
 }
