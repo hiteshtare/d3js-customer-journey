@@ -53,9 +53,9 @@ const circles_config = [{
   Text: 'Segment C',
   id: 'circleC',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 150,
+  originX: 250,
   originY: 300,
-  svg_width: 400,
+  svg_width: 500,
   svg_height: 650,
   //Below values are Calculated
   raduis: 0,
