@@ -5,6 +5,7 @@ const customer_config = [{
   SMS: 4,
   Text: 'Customer 1',
   id: 'customer1',
+  url: '../pages/bubble.html?segment=circleA&&customer=customer1',
   originX: 300,
   originY: 300,
   svg_width: 650,
@@ -21,6 +22,7 @@ const customer_config = [{
   SMS: 7,
   Text: 'Customer 2',
   id: 'customer2',
+  url: '../pages/bubble.html?segment=circleA&&customer=customer2',
   originX: 300,
   originY: 300,
   svg_width: 650,
@@ -37,6 +39,7 @@ const customer_config = [{
   SMS: 7,
   Text: 'Customer 3',
   id: 'customer3',
+  url: '../pages/bubble.html?segment=circleA&&customer=customer3',
   originX: 300,
   originY: 300,
   svg_width: 650,
@@ -55,6 +58,10 @@ const circle_svg = renderCircle(customer_config[0]);
 //Render all Node types
 renderAllNodes(circle_svg, customer_config[0])
 
+//To add click event for all Nodes to navigate for Circle A
+addClickEventsforNodes(customer_config[0]);
+
+
 //Customer drodown change
 function renderGraphOnChange() {
   const value = document.getElementById("selCustomer").value;
@@ -69,4 +76,7 @@ function renderGraphOnChange() {
   const circle_svg = renderCircleforCustomer(filtered_config);
   //Render all Node types
   renderAllNodes(circle_svg, filtered_config)
+
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforNodes(filtered_config);
 }

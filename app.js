@@ -18,7 +18,7 @@ const circles_config = [{
   SMS: 6,
   Text: 'Segment A',
   id: 'circleA',
-  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
+  url: '../pages/bubble.html?segment=circleA',
   originX: 300,
   originY: 300,
   svg_width: 650,
@@ -35,7 +35,7 @@ const circles_config = [{
   SMS: 5,
   Text: 'Segment B',
   id: 'circleB',
-  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
+  url: '../pages/bubble.html?segment=circleB',
   originX: 250,
   originY: 300,
   svg_width: 500,
@@ -52,7 +52,7 @@ const circles_config = [{
   SMS: 3,
   Text: 'Segment C',
   id: 'circleC',
-  url: 'https://observablehq.com/@d3/zoomable-circle-packing',
+  url: '../pages/bubble.html?segment=circleC',
   originX: 250,
   originY: 300,
   svg_width: 500,
@@ -74,13 +74,13 @@ circles_config.forEach((circle_config, index) => {
 
   renderAllNodes(circle_svg, circle_config);
 
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforNodes(circle_config);
+
   //For index 0 i.e. first Circles render slider and add click for navigation
   if (index === 0) {
     //To handles sliders for Circle A
     rangeSliderForNodes(circle_svg, circle_config);
-
-    //To add click event for all Nodes to navigate for Circle A
-    addClickEventsforNodes(circle_config);
 
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);

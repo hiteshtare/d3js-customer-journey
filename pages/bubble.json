@@ -7,6 +7,7 @@
       "id": "circleA",
       "children": [{
         "name": "Customer 1",
+        "id": "customer1",
         "children": [{
             "name": "Meeting",
             "size": 1000
@@ -26,6 +27,7 @@
         ]
       }, {
         "name": "Customer 2",
+        "id": "customer2",
         "children": [{
             "name": "Meeting",
             "size": 800
@@ -45,6 +47,7 @@
         ]
       }, {
         "name": "Customer 3",
+        "id": "customer3",
         "children": [{
             "name": "Meeting",
             "size": 1200
@@ -68,6 +71,7 @@
       "id": "circleB",
       "children": [{
         "name": "Customer 4",
+        "id": "customer4",
         "children": [{
             "name": "Meeting",
             "size": 400
@@ -87,6 +91,7 @@
         ]
       }, {
         "name": "Customer 5",
+        "id": "customer5",
         "children": [{
             "name": "Meeting",
             "size": 600
@@ -106,6 +111,7 @@
         ]
       }, {
         "name": "Customer 6",
+        "id": "customer6",
         "children": [{
             "name": "Meeting",
             "size": 400
@@ -125,6 +131,7 @@
         ]
       }, {
         "name": "Customer 7",
+        "id": "customer7",
         "children": [{
             "name": "Meeting",
             "size": 800
@@ -148,6 +155,7 @@
       "id": "circleC",
       "children": [{
         "name": "Customer 8",
+        "id": "customer8",
         "children": [{
             "name": "Meeting",
             "size": 200
@@ -167,6 +175,7 @@
         ]
       }, {
         "name": "Customer 9",
+        "id": "customer9",
         "children": [{
             "name": "Meeting",
             "size": 400
@@ -186,6 +195,7 @@
         ]
       }, {
         "name": "Customer 10",
+        "id": "customer10",
         "children": [{
             "name": "Meeting",
             "size": 600
@@ -205,6 +215,7 @@
         ]
       }, {
         "name": "Customer 11",
+        "id": "customer11",
         "children": [{
             "name": "Meeting",
             "size": 200
@@ -224,6 +235,7 @@
         ]
       }, {
         "name": "Customer 12",
+        "id": "customer12",
         "children": [{
             "name": "Meeting",
             "size": 400
@@ -243,6 +255,7 @@
         ]
       }, {
         "name": "Customer 13",
+        "id": "customer13",
         "children": [{
           "name": "Meeting",
           "size": 600

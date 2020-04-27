@@ -7,8 +7,8 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 
 <body>
-	<button type="button" class="button button1" onclick="window.open(`../index.html`, '_self');">&laquo; Go Back</button>
-	<button type="button" class="button button2" onclick="navigateToBubble()">Bubble &raquo;</button>
+	<button type="button" class="button button1" onclick="goBack()">&laquo; Go Back</button>
+	<!-- <button type="button" class="button button2" onclick="navigateToBubble()">Bubble &raquo;</button> -->
 
 	<p>Select a customer from the list.</p>
 
@@ -32,6 +32,11 @@
 
 			window.open(`../pages/bubble.html?segment=${segmentName}`, '_self');
 		}
+
+		function goBack() {
+			console.warn(`goBack`);
+			window.history.back();
+		};
 	</script>
 
 	<style type="text/css">
