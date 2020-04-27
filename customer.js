@@ -52,9 +52,10 @@ const customer_config = [{
 calculateRadius_NodeOrigin(customer_config[0]);
 //Container for Circle A
 const circle_svg = renderCircle(customer_config[0]);
-
+//Render all Node types
 renderAllNodes(circle_svg, customer_config[0])
 
+//Customer drodown change
 function renderGraphOnChange() {
   const value = document.getElementById("selCustomer").value;
 
@@ -62,10 +63,10 @@ function renderGraphOnChange() {
     return element.id === value;
   })
 
+  //Calculate raduis and Node Origin 
   calculateRadius_NodeOrigin(filtered_config);
-
   //Container for Customer
   const circle_svg = renderCircleforCustomer(filtered_config);
-
+  //Render all Node types
   renderAllNodes(circle_svg, filtered_config)
 }

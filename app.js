@@ -65,11 +65,10 @@ const circles_config = [{
 }];
 
 //Calculate raduis and Node Origin for Circle A
-
 calculateRadius_NodeOrigin(circles_config[0]);
 //Container for Circle A
 const circle_svg = renderCircle(circles_config[0]);
-
+//Render all Node types
 renderAllNodes(circle_svg, circles_config[0]);
 
 //To handles sliders for Circle A
@@ -81,7 +80,7 @@ addClickEventsforNodes(circles_config[0]);
 //To add max red boundary for Circle A
 renderRedCircle(circle_svg, circles_config[0]);
 
-
+//Segment drodown change
 function renderGraphOnChange() {
   const value = document.getElementById("selSegment").value;
 
@@ -89,10 +88,10 @@ function renderGraphOnChange() {
     return element.id === value;
   })
 
+  //Calculate raduis and Node Origin 
   calculateRadius_NodeOrigin(filtered_config);
-
   //Container for Customer
   const circle_svg = renderCircleforCustomer(filtered_config);
-
+  //Render all Node types
   renderAllNodes(circle_svg, filtered_config)
 }
