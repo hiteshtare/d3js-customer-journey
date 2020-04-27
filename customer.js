@@ -7,6 +7,8 @@ const customer_config = [{
   id: 'customer1',
   originX: 300,
   originY: 300,
+  svg_width: 650,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -21,6 +23,8 @@ const customer_config = [{
   id: 'customer2',
   originX: 300,
   originY: 300,
+  svg_width: 650,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -35,6 +39,8 @@ const customer_config = [{
   id: 'customer3',
   originX: 300,
   originY: 300,
+  svg_width: 650,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
