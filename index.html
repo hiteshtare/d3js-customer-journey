@@ -11,6 +11,17 @@
 	<div class="slidecontainer">
 		<div class="row">
 			<div class="column">
+				<p>Select a segment from the list.</p>
+				<select id="selSegment" onchange="renderSliderOnChange()">
+					<option value="circleA">A</option>
+					<option value="circleB">B</option>
+					<option value="circleC">C</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="column">
 				<p class="pSliderLabels">Email: <span id="spanEmail"></span></p>
 				<input type="range" min="1" max="40" value="10" class="slider rangeEmail" id="rangeEmail">
 			</div>

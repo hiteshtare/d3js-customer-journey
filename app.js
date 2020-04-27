@@ -39,7 +39,7 @@ const circles_config = [{
   originX: 250,
   originY: 300,
   svg_width: 500,
-  svg_height: 500,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -56,7 +56,7 @@ const circles_config = [{
   originX: 150,
   originY: 300,
   svg_width: 400,
-  svg_height: 400,
+  svg_height: 650,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -64,12 +64,13 @@ const circles_config = [{
   totalNodes: 0
 }];
 
+var circle_svg;
 circles_config.forEach((circle_config, index) => {
   //Calculate raduis and Node Origin for Circle A
 
   calculateRadius_NodeOrigin(circle_config);
   //Container for Circle A
-  const circle_svg = renderCircle(circle_config);
+  circle_svg = renderCircle(circle_config);
 
   renderAllNodes(circle_svg, circle_config);
 
@@ -85,3 +86,15 @@ circles_config.forEach((circle_config, index) => {
     renderRedCircle(circle_svg, circle_config);
   }
 });
+
+
+function renderSliderOnChange() {
+  const value = document.getElementById("selSegment").value;
+
+  const filtered_config = circles_config.find((element) => {
+    return element.id === value;
+  })
+
+  //To handles sliders for Circle
+  rangeSliderForNodes(circle_svg, filtered_config);
+}
