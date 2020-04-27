@@ -7,6 +7,8 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 
 <body>
+	<button type="button" class="button1" onclick="window.open(`index.html`, '_self');">&laquo; Go Back</button>
+
 	<p>Select a customer from the list.</p>
 
 	<select id="selCustomer" onchange="renderGraphOnChange()">
@@ -29,6 +31,26 @@
 		select {
 			float: left;
 		}
+
+		.button1 {
+			background-color: #008CBA;
+			color: white;
+
+			/* Green */
+			border: none;
+			padding: 10px 16px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		.button1:hover {
+			background-color: #03a9f4;
+			color: white;
+		}
+
+		/* Green */
 	</style>
 </body>
 

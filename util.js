@@ -430,7 +430,7 @@ function addClickEventsforNodes(p_circle_config) {
   });
 
   d3.selectAll(`#${p_circle_config.id}`).selectAll("text.segment-text").on("click", function () {
-    var win = window.open(`customer.html?segment=${p_circle_config.id}`, '_blank');
+    var win = window.open(`customer.html?segment=${p_circle_config.id}`, '_self');
     if (win) {
       //Browser has allowed it to be opened
       win.focus();
