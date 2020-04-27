@@ -36,10 +36,10 @@ const circles_config = [{
   Text: 'Segment B',
   id: 'circleB',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 300,
+  originX: 250,
   originY: 300,
-  svg_width: 650,
-  svg_height: 650,
+  svg_width: 500,
+  svg_height: 500,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -53,10 +53,10 @@ const circles_config = [{
   Text: 'Segment C',
   id: 'circleC',
   url: 'https://observablehq.com/@d3/zoomable-circle-packing',
-  originX: 300,
+  originX: 150,
   originY: 300,
-  svg_width: 650,
-  svg_height: 650,
+  svg_width: 400,
+  svg_height: 400,
   //Below values are Calculated
   raduis: 0,
   nodeOriginX: 0,
@@ -64,43 +64,24 @@ const circles_config = [{
   totalNodes: 0
 }];
 
-//Calculate raduis and Node Origin for Circle A
-calculateRadius_NodeOrigin(circles_config[0]);
-//Container for Circle A
-const circle_svg = renderCircle(circles_config[0]);
-//Render all Node types
-renderAllNodes(circle_svg, circles_config[0]);
+circles_config.forEach((circle_config, index) => {
+  //Calculate raduis and Node Origin for Circle A
 
-//To handles sliders for Circle A
-rangeSliderForNodes(circle_svg, circles_config[0]);
+  calculateRadius_NodeOrigin(circle_config);
+  //Container for Circle A
+  const circle_svg = renderCircle(circle_config);
 
-//To add click event for all Nodes to navigate for Circle A
-addClickEventsforNodes(circles_config[0]);
+  renderAllNodes(circle_svg, circle_config);
 
-//To add max red boundary for Circle A
-renderRedCircle(circle_svg, circles_config[0]);
+  //For index 0 i.e. first Circles render slider and add click for navigation
+  if (index === 0) {
+    //To handles sliders for Circle A
+    rangeSliderForNodes(circle_svg, circle_config);
 
-//Segment drodown change
-function renderGraphOnChange() {
-  const value = document.getElementById("selSegment").value;
+    //To add click event for all Nodes to navigate for Circle A
+    addClickEventsforNodes(circle_config);
 
-  const filtered_config = circles_config.find((element) => {
-    return element.id === value;
-  })
-
-  //Calculate raduis and Node Origin 
-  calculateRadius_NodeOrigin(filtered_config);
-  //Container for Customer
-  const circle_svg = renderCircleforCustomer(filtered_config);
-  //Render all Node types
-  renderAllNodes(circle_svg, filtered_config)
-
-  //To handles sliders for Circle A
-  rangeSliderForNodes(circle_svg, filtered_config);
-
-  //To add click event for all Nodes to navigate for Circle A
-  addClickEventsforNodes(filtered_config);
-
-  //To add max red boundary for Circle A
-  renderRedCircle(circle_svg, filtered_config);
-}
+    //To add max red boundary for Circle A
+    renderRedCircle(circle_svg, circle_config);
+  }
+});

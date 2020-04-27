@@ -7,13 +7,6 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 
 <body>
-	<p>Select a segment from the list.</p>
-	<select id="selSegment" onchange="renderGraphOnChange()">
-		<option value="circleA">A</option>
-		<option value="circleB">B</option>
-		<option value="circleC">C</option>
-	</select>
-
 	<div id="viz"></div>
 	<div class="slidecontainer">
 		<div class="row">
@@ -45,10 +38,6 @@
 		#viz {
 			max-height: 800px;
 			display: inline-flex;
-		}
-
-		select {
-			float: left;
 		}
 
 		.error {
