@@ -412,9 +412,9 @@ function rangeSliderForNodes(circle_svg, p_circle_config) {
 }
 
 function addClickEventsforNodes(p_circle_config) {
-  console.warn(`addClickEventsforNodes`);
-
   d3.selectAll(`#${p_circle_config.id}`).selectAll("circle.nodes").on("click", function () {
+    console.warn(`addClickEventsforNodes`);
+
     var win = window.open(`${p_circle_config.url}`, '_self');
     if (win) {
       //Browser has allowed it to be opened
@@ -427,9 +427,9 @@ function addClickEventsforNodes(p_circle_config) {
 }
 
 function addClickEventsforCenterText(p_circle_config) {
-  console.warn(`addClickEventsforCenterText`);
-
   d3.selectAll(`#${p_circle_config.id}`).selectAll("text.segment-text").on("click", function () {
+    console.warn(`addClickEventsforCenterText`);
+
     var win = window.open(`pages/customer.html?segment=${p_circle_config.id}`, '_self');
     if (win) {
       //Browser has allowed it to be opened
@@ -491,6 +491,9 @@ function renderSettingsforCircleA(circle_svg, circle_config) {
 
   //To add click event for all Nodes to navigate for Circle A
   addClickEventsforNodes(circle_config);
+
+  //To add click event for all Nodes to navigate for Circle A
+  addClickEventsforCenterText(circle_config);
 
   //To add max red boundary for Circle A
   renderRedCircle(circle_svg, circle_config);
