@@ -77,6 +77,9 @@ circles_config.forEach((circle_config, index) => {
   //To add click event for all Nodes to navigate for Circle A
   addClickEventsforNodes(circle_config);
 
+  //To add click event for Center Text navigation to Customer View
+  addClickEventsforCenterText(circle_config);
+
   //For index 0 i.e. first Circles render slider and add click for navigation
   if (index === 0) {
     //To handles sliders for Circle A
@@ -84,9 +87,6 @@ circles_config.forEach((circle_config, index) => {
 
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);
-
-    //To add click event for Center Text navigation to Customer View
-    addClickEventsforCenterText(circle_config);
   }
 });
 

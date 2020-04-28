@@ -13,9 +13,6 @@
 	<p>Select a customer from the list.</p>
 
 	<select id="selCustomer" onchange="renderGraphOnChange()">
-		<option value="customer1">1</option>
-		<option value="customer2">2</option>
-		<option value="customer3">3</option>
 	</select>
 
 	<div id="viz"></div>
@@ -24,19 +21,41 @@
 	<script type="text/javascript" src="customer.js"></script>
 
 	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const segmentName = urlParams.get('segment');
+
 		function navigateToBubble() {
 			console.warn(`navigateToBubble`);
-
-			const urlParams = new URLSearchParams(window.location.search);
-			const segmentName = urlParams.get('segment');
 
 			window.open(`../pages/bubble.html?segment=${segmentName}`, '_self');
 		}
 
 		function goBack() {
 			console.warn(`goBack`);
+
 			window.history.back();
 		};
+
+
+		d3.json("../data/flare.json", function (error, root) {
+			//Set default segment selected using Query String
+			const segments = root.children[0].children;
+			const selectedSegment = segments.find((element) => {
+				return element.id === segmentName;
+			});
+			const customers = selectedSegment.children;
+
+			let selCustomer = document.getElementById('selCustomer');
+
+			customers.forEach(customer => {
+				let opt = document.createElement('option');
+				opt.value = customer.id;
+				opt.innerHTML = customer.name;
+				selCustomer.appendChild(opt);
+			});
+
+			renderGraphOnChange();
+		});
 	</script>
 
 	<style type="text/css">
