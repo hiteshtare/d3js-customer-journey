@@ -29,6 +29,58 @@ const svg_config = {
   height: 650
 };
 
+function calculateRadius_NodeOriginSequence(p_circle_config) {
+  console.warn(`calculateRadius_NodeOriginSequence for ${p_circle_config.id}`);
+
+  const nodes = p_circle_config.Nodes;
+  console.warn(`Total Nodes :${nodes.length}`);
+  //Checking counts of Each Node type in config
+  let meetingCount = 0;
+  let facebookCount = 0;
+  let emailCount = 0;
+  let smsCount = 0;
+
+  for (let index = 0; index < nodes.length; index++) {
+    const node = nodes[index];
+    console.warn(`Node id: ${node.id} >> Type: ${node.type}`);
+
+    switch (node.type) {
+      case 'Meeting':
+        meetingCount++;
+        break;
+      case 'Facebook':
+        facebookCount++;
+      case 'Email':
+        emailCount++;
+      case 'SMS':
+        smsCount++;
+      default:
+        break;
+    } //end of switch
+  } //end of for
+
+  //Setting values for Each Node type in config
+  p_circle_config.Meeting = meetingCount;
+  p_circle_config.Facebook = facebookCount;
+  p_circle_config.Email = emailCount;
+  p_circle_config.SMS = smsCount;
+
+
+  p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
+    p_circle_config.Email + p_circle_config.SMS;
+
+  console.log(`Total Nodes: ${p_circle_config.totalNodes} for ${p_circle_config.id}`);
+
+  const raduis = p_circle_config.Meeting * Weights.Meeting + p_circle_config.Facebook * Weights.Facebook +
+    p_circle_config.Email * Weights.Email + p_circle_config.SMS * Weights.SMS;
+
+  p_circle_config.raduis = raduis;
+  console.log(`Raduis: ${raduis} for ${p_circle_config.id}`);
+
+  p_circle_config.nodeOriginX = p_circle_config.originX + ((p_circle_config.raduis) * Math.sin(0));
+  p_circle_config.nodeOriginY = p_circle_config.originY - ((p_circle_config.raduis) * Math.cos(0));
+}
+
 function calculateRadius_NodeOrigin(p_circle_config) {
   console.warn(`calculateRadius_NodeOrigin`);
 
@@ -297,13 +349,20 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
   const nodes = p_circle_config.Nodes;
   console.warn(`Total Nodes :${nodes.length}`);
 
+  //Checking counts of Each Node type in config
+  let meetingCount = 0;
+  let facebookCount = 0;
+  let emailCount = 0;
+  let smsCount = 0;
+
   for (let index = 0; index < nodes.length; index++) {
     const node = nodes[index];
-
     console.warn(`Node id: ${node.id} >> Type: ${node.type}`);
 
     switch (node.type) {
       case 'Meeting':
+        meetingCount++;
+
         let meeting = p_circle_svg.append("circle").attr({
           cx: p_circle_config.nodeOriginX,
           cy: p_circle_config.nodeOriginY,
@@ -320,6 +379,8 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
         break;
 
       case 'Facebook':
+        facebookCount++;
+
         let facebook = p_circle_svg.append("circle").attr({
           cx: p_circle_config.nodeOriginX,
           cy: p_circle_config.nodeOriginY,
@@ -336,6 +397,8 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
         break;
 
       case 'Email':
+        emailCount++;
+
         let email = p_circle_svg.append("circle").attr({
           cx: p_circle_config.nodeOriginX,
           cy: p_circle_config.nodeOriginY,
@@ -354,6 +417,8 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
         break;
 
       case 'SMS':
+        smsCount++;
+
         let sms = p_circle_svg.append("circle").attr({
           cx: p_circle_config.nodeOriginX,
           cy: p_circle_config.nodeOriginY,
@@ -371,9 +436,14 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
 
       default:
         break;
-    }
+    } //end of switch
+  } //end of for
 
-  }
+  //Setting values for Each Node type in config
+  p_circle_config.Meeting = meetingCount;
+  p_circle_config.Facebook = facebookCount;
+  p_circle_config.Email = emailCount;
+  p_circle_config.SMS = smsCount;
 
   return p_circle_svg;
 }

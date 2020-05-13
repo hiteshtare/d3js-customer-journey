@@ -37,10 +37,10 @@ const circles_config = [{
       id: 7,
       type: 'Email',
     }],
-    Meeting: 5,
-    Facebook: 10,
-    Email: 10,
-    SMS: 6,
+    Meeting: 0,
+    Facebook: 0,
+    Email: 0,
+    SMS: 0,
     Text: 'Segment A',
     id: 'circleA',
     url: '../pages/bubble.html?segment=circleA',
@@ -94,15 +94,19 @@ const circles_config = [{
 var circle_svg;
 circles_config.forEach((circle_config, index) => {
   //Calculate raduis and Node Origin for Circle A
-
-  calculateRadius_NodeOrigin(circle_config);
-  //Container for Circle A
-  circle_svg = renderCircle(circle_config);
-
   if (index === 0) {
+    calculateRadius_NodeOriginSequence(circle_config);
+    //Container for Circle A
+    circle_svg = renderCircle(circle_config);
+
     //To render nodes sequencially
     renderAllSequenceNodes(circle_svg, circle_config);
   } else {
+
+    calculateRadius_NodeOrigin(circle_config);
+    //Container for Circle A
+    circle_svg = renderCircle(circle_config);
+
     renderAllNodes(circle_svg, circle_config);
   }
 
