@@ -36,6 +36,9 @@ const circles_config = [{
     }, {
       id: 7,
       type: 'Email',
+    }, {
+      id: 8,
+      type: 'SMS',
     }],
     Meeting: 0,
     Facebook: 0,

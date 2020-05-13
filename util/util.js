@@ -42,18 +42,19 @@ function calculateRadius_NodeOriginSequence(p_circle_config) {
 
   for (let index = 0; index < nodes.length; index++) {
     const node = nodes[index];
-    console.warn(`Node id: ${node.id} >> Type: ${node.type}`);
-
     switch (node.type) {
       case 'Meeting':
         meetingCount++;
         break;
       case 'Facebook':
         facebookCount++;
+        break;
       case 'Email':
         emailCount++;
+        break;
       case 'SMS':
         smsCount++;
+        break;
       default:
         break;
     } //end of switch
@@ -64,7 +65,6 @@ function calculateRadius_NodeOriginSequence(p_circle_config) {
   p_circle_config.Facebook = facebookCount;
   p_circle_config.Email = emailCount;
   p_circle_config.SMS = smsCount;
-
 
   p_circle_config.totalNodes = p_circle_config.Meeting + p_circle_config.Facebook +
     p_circle_config.Email + p_circle_config.SMS;
@@ -359,6 +359,10 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
     const node = nodes[index];
     console.warn(`Node id: ${node.id} >> Type: ${node.type}`);
 
+    if (index === 0) {
+      last_Rotate_Value = 0;
+    }
+
     switch (node.type) {
       case 'Meeting':
         meetingCount++;
@@ -583,18 +587,27 @@ function rangeSliderForSequenceNodes(circle_svg, p_circle_config) {
     //Assigned slider value for DOM
     spanEmail.innerHTML = this.value;
     //Update value for email in Circle Config
+
+    const nodesCount = p_circle_config.Nodes.length;
+    for (let index = p_circle_config.Email; index <= +this.value; index++) {
+      p_circle_config.Nodes.push({
+        id: p_circle_config.Nodes.length,
+        type: 'Email'
+      });
+    }
+
     p_circle_config.Email = +this.value;
 
     // To remove all nodes for the current SVG circle
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOrigin(p_circle_config);
+    calculateRadius_NodeOriginSequence(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
-    renderAllNodes(circleA_svg, p_circle_config);
+    renderAllSequenceNodes(circleA_svg, p_circle_config);
 
     renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
@@ -618,12 +631,12 @@ function rangeSliderForSequenceNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOrigin(p_circle_config);
+    calculateRadius_NodeOriginSequence(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
-    renderAllNodes(circleA_svg, p_circle_config);
+    renderAllSequenceNodes(circleA_svg, p_circle_config);
 
     renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
@@ -647,12 +660,12 @@ function rangeSliderForSequenceNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOrigin(p_circle_config);
+    calculateRadius_NodeOriginSequence(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
-    renderAllNodes(circleA_svg, p_circle_config);
+    renderAllSequenceNodes(circleA_svg, p_circle_config);
 
     renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
@@ -676,12 +689,12 @@ function rangeSliderForSequenceNodes(circle_svg, p_circle_config) {
     d3.select(`#${p_circle_config.id}`).html('');
 
     //Calculate raduis and Node Origin for Circle A
-    calculateRadius_NodeOrigin(p_circle_config);
+    calculateRadius_NodeOriginSequence(p_circle_config);
 
     // To render circle if it does not exists in DOM
     const circleA_svg = renderCircle(p_circle_config);
     //Re-render graph for updated values
-    renderAllNodes(circleA_svg, p_circle_config);
+    renderAllSequenceNodes(circleA_svg, p_circle_config);
 
     renderSettingsforCircleA(circleA_svg, p_circle_config)
   }
