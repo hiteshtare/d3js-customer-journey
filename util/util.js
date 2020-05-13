@@ -291,8 +291,215 @@ function renderAllNodes(p_circle_svg, p_circle_config) {
 
 }
 
+function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
+  console.warn(`renderAllSequenceNodes for ${p_circle_config.id}`);
+
+  const nodes = p_circle_config.Nodes;
+  console.warn(`Total Nodes :${nodes.length}`);
+
+  for (let index = 0; index < nodes.length; index++) {
+    const node = nodes[index];
+
+    console.warn(`Node id: ${node.id} >> Type: ${node.type}`);
+
+    switch (node.type) {
+      case 'Meeting':
+        let meeting = p_circle_svg.append("circle").attr({
+          cx: p_circle_config.nodeOriginX,
+          cy: p_circle_config.nodeOriginY,
+          opacity: 100,
+          r: Nodes.Raduis,
+          fill: Nodes.Meeting.color,
+          class: 'nodes'
+        });
+
+        // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
+        last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
+
+        meeting.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
+        break;
+
+      case 'Facebook':
+        let facebook = p_circle_svg.append("circle").attr({
+          cx: p_circle_config.nodeOriginX,
+          cy: p_circle_config.nodeOriginY,
+          opacity: 100,
+          r: Nodes.Raduis,
+          fill: Nodes.Facebook.color,
+          class: 'nodes'
+        });
+
+        // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
+        last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
+
+        facebook.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
+        break;
+
+      case 'Email':
+        let email = p_circle_svg.append("circle").attr({
+          cx: p_circle_config.nodeOriginX,
+          cy: p_circle_config.nodeOriginY,
+          opacity: 100,
+          r: Nodes.Raduis,
+          fill: Nodes.Email.color,
+          class: 'nodes'
+        });
+
+        // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
+        if (index !== 0) {
+          last_Rotate_Value = Nodes.Raduis * index;
+
+          email.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
+        }
+        break;
+
+      case 'SMS':
+        let sms = p_circle_svg.append("circle").attr({
+          cx: p_circle_config.nodeOriginX,
+          cy: p_circle_config.nodeOriginY,
+          opacity: 100,
+          r: Nodes.Raduis,
+          fill: Nodes.SMS.color,
+          class: 'nodes'
+        });
+
+        // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
+        last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
+
+        sms.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
+        break;
+
+      default:
+        break;
+    }
+
+  }
+
+  return p_circle_svg;
+}
+
 function rangeSliderForNodes(circle_svg, p_circle_config) {
   console.warn(`rangeSliderForNodes`);
+
+  //---------------------EMAIL---------------------//
+  var sliderRange_Email = document.getElementById("rangeEmail");
+  var spanEmail = document.getElementById("spanEmail");
+  sliderRange_Email.value = p_circle_config.Email;
+  spanEmail.innerHTML = `` + p_circle_config.Email;
+
+  sliderRange_Email.oninput = function () {
+    console.log(`Range Slider for Email is updated`);
+
+    //Assigned slider value for DOM
+    spanEmail.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Email = +this.value;
+
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
+
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOrigin(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
+  }
+  //---------------------EMAIL---------------------//
+
+  //---------------------FACEBOOK---------------------//
+  var sliderRange_Facebook = document.getElementById("rangeFacebook");
+  var spanFacebook = document.getElementById("spanFacebook");
+  sliderRange_Facebook.value = p_circle_config.Facebook;
+  spanFacebook.innerHTML = `` + p_circle_config.Facebook;
+
+  sliderRange_Facebook.oninput = function () {
+    console.log(`Range Slider for Facebook is updated`);
+
+    //Assigned slider value for DOM
+    spanFacebook.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Facebook = +this.value;
+
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
+
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOrigin(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
+  }
+  //---------------------FACEBOOK---------------------//
+
+  //---------------------MEETING---------------------//
+  var sliderRange_Meeting = document.getElementById("rangeMeeting");
+  var spanMeeting = document.getElementById("spanMeeting");
+  sliderRange_Meeting.value = p_circle_config.Meeting;
+  spanMeeting.innerHTML = `` + p_circle_config.Meeting;
+
+  sliderRange_Meeting.oninput = function () {
+    console.log(`Range Slider for Meeting is updated`);
+
+    //Assigned slider value for DOM
+    spanMeeting.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.Meeting = +this.value;
+
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
+
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOrigin(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
+  }
+  //---------------------MEETING---------------------//
+
+  //---------------------SMS---------------------//
+  var sliderRange_SMS = document.getElementById("rangeSMS");
+  var spanSMS = document.getElementById("spanSMS");
+  sliderRange_SMS.value = p_circle_config.SMS;
+  spanSMS.innerHTML = `` + p_circle_config.SMS;
+
+  sliderRange_SMS.oninput = function () {
+    console.log(`Range Slider for SMS is updated`);
+
+    //Assigned slider value for DOM
+    spanSMS.innerHTML = this.value;
+    //Update value for email in Circle Config
+    p_circle_config.SMS = +this.value;
+
+    // To remove all nodes for the current SVG circle
+    d3.select(`#${p_circle_config.id}`).html('');
+
+    //Calculate raduis and Node Origin for Circle A
+    calculateRadius_NodeOrigin(p_circle_config);
+
+    // To render circle if it does not exists in DOM
+    const circleA_svg = renderCircle(p_circle_config);
+    //Re-render graph for updated values
+    renderAllNodes(circleA_svg, p_circle_config);
+
+    renderSettingsforCircleA(circleA_svg, p_circle_config)
+  }
+  //---------------------SMS---------------------//
+}
+
+function rangeSliderForSequenceNodes(circle_svg, p_circle_config) {
+  console.warn(`rangeSliderForSequenceNodes`);
 
   //---------------------EMAIL---------------------//
   var sliderRange_Email = document.getElementById("rangeEmail");

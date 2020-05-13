@@ -12,57 +12,84 @@ $(function () {
 //================================Load JSON data================================//
 
 const circles_config = [{
-  Meeting: 5,
-  Facebook: 10,
-  Email: 10,
-  SMS: 6,
-  Text: 'Segment A',
-  id: 'circleA',
-  url: '../pages/bubble.html?segment=circleA',
-  originX: 300,
-  originY: 300,
-  svg_width: 650,
-  svg_height: 650,
-  //Below values are Calculated
-  raduis: 0,
-  nodeOriginX: 0,
-  nodeOriginY: 0,
-  totalNodes: 0
-}, {
-  Meeting: 4,
-  Facebook: 7,
-  Email: 7,
-  SMS: 5,
-  Text: 'Segment B',
-  id: 'circleB',
-  url: '../pages/bubble.html?segment=circleB',
-  originX: 250,
-  originY: 300,
-  svg_width: 500,
-  svg_height: 650,
-  //Below values are Calculated
-  raduis: 0,
-  nodeOriginX: 0,
-  nodeOriginY: 0,
-  totalNodes: 0
-}, {
-  Meeting: 2,
-  Facebook: 5,
-  Email: 5,
-  SMS: 3,
-  Text: 'Segment C',
-  id: 'circleC',
-  url: '../pages/bubble.html?segment=circleC',
-  originX: 250,
-  originY: 300,
-  svg_width: 500,
-  svg_height: 650,
-  //Below values are Calculated
-  raduis: 0,
-  nodeOriginX: 0,
-  nodeOriginY: 0,
-  totalNodes: 0
-}];
+    Nodes: [{
+      id: 0,
+      type: 'Meeting',
+    }, {
+      id: 1,
+      type: 'Facebook',
+    }, {
+      id: 2,
+      type: 'Email',
+    }, {
+      id: 3,
+      type: 'SMS',
+    }, {
+      id: 4,
+      type: 'Meeting',
+    }, {
+      id: 5,
+      type: 'Meeting',
+    }, {
+      id: 6,
+      type: 'Facebook',
+    }, {
+      id: 7,
+      type: 'Email',
+    }],
+    Meeting: 5,
+    Facebook: 10,
+    Email: 10,
+    SMS: 6,
+    Text: 'Segment A',
+    id: 'circleA',
+    url: '../pages/bubble.html?segment=circleA',
+    originX: 300,
+    originY: 300,
+    svg_width: 650,
+    svg_height: 650,
+    //Below values are Calculated
+    raduis: 0,
+    nodeOriginX: 0,
+    nodeOriginY: 0,
+    totalNodes: 0
+  },
+  {
+    Meeting: 4,
+    Facebook: 7,
+    Email: 7,
+    SMS: 5,
+    Text: 'Segment B',
+    id: 'circleB',
+    url: '../pages/bubble.html?segment=circleB',
+    originX: 250,
+    originY: 300,
+    svg_width: 500,
+    svg_height: 650,
+    //Below values are Calculated
+    raduis: 0,
+    nodeOriginX: 0,
+    nodeOriginY: 0,
+    totalNodes: 0
+  }, {
+    Meeting: 2,
+    Facebook: 5,
+    Email: 5,
+    SMS: 3,
+    Text: 'Segment C',
+    id: 'circleC',
+    url: '../pages/bubble.html?segment=circleC',
+    originX: 250,
+    originY: 300,
+    svg_width: 500,
+    svg_height: 650,
+    //Below values are Calculated
+    raduis: 0,
+    nodeOriginX: 0,
+    nodeOriginY: 0,
+    totalNodes: 0
+  }
+];
 
 var circle_svg;
 circles_config.forEach((circle_config, index) => {
@@ -72,7 +99,12 @@ circles_config.forEach((circle_config, index) => {
   //Container for Circle A
   circle_svg = renderCircle(circle_config);
 
-  renderAllNodes(circle_svg, circle_config);
+  if (index === 0) {
+    //To render nodes sequencially
+    renderAllSequenceNodes(circle_svg, circle_config);
+  } else {
+    renderAllNodes(circle_svg, circle_config);
+  }
 
   //To add click event for all Nodes to navigate for Circle A
   addClickEventsforNodes(circle_config);
@@ -83,7 +115,7 @@ circles_config.forEach((circle_config, index) => {
   //For index 0 i.e. first Circles render slider and add click for navigation
   if (index === 0) {
     //To handles sliders for Circle A
-    rangeSliderForNodes(circle_svg, circle_config);
+    rangeSliderForSequenceNodes(circle_svg, circle_config);
 
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);
