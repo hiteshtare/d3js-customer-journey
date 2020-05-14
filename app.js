@@ -15,30 +15,48 @@ const circles_config = [{
     Nodes: [{
       id: 0,
       type: 'Meeting',
+      day: 1,
+      desc: 'Meeting 1'
     }, {
       id: 1,
       type: 'Facebook',
+      day: 2,
+      desc: 'Facebook 1'
     }, {
       id: 2,
       type: 'Email',
+      day: 3,
+      desc: 'Email 1'
     }, {
       id: 3,
       type: 'SMS',
+      day: 4,
+      desc: 'SMS 1'
     }, {
       id: 4,
       type: 'Meeting',
+      day: 5,
+      desc: 'Meeting 2'
     }, {
       id: 5,
       type: 'Meeting',
+      day: 6,
+      desc: 'Meeting 3'
     }, {
       id: 6,
       type: 'Facebook',
+      day: 7,
+      desc: 'Facebook 2'
     }, {
       id: 7,
       type: 'Email',
+      day: 8,
+      desc: 'Email 2'
     }, {
       id: 8,
       type: 'SMS',
+      day: 9,
+      desc: 'SMS 2'
     }],
     Meeting: 0,
     Facebook: 0,
@@ -121,9 +139,6 @@ circles_config.forEach((circle_config, index) => {
 
   //For index 0 i.e. first Circles render slider and add click for navigation
   if (index === 0) {
-    //To handles sliders for Circle A
-    rangeSliderForSequenceNodes(circle_svg, circle_config);
-
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);
   }
