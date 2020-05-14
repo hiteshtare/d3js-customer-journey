@@ -57,6 +57,31 @@ const circles_config = [{
       type: 'SMS',
       day: 9,
       desc: 'SMS 2'
+    }, {
+      id: 9,
+      type: 'Facebook',
+      day: 10,
+      desc: 'Facebook 3'
+    }, {
+      id: 10,
+      type: 'Email',
+      day: 11,
+      desc: 'Email 3'
+    }, {
+      id: 11,
+      type: 'Email',
+      day: 12,
+      desc: 'Email 4'
+    }, {
+      id: 12,
+      type: 'SMS',
+      day: 13,
+      desc: 'SMS 3'
+    }, {
+      id: 13,
+      type: 'Meeting',
+      day: 9,
+      desc: 'Meeting 4'
     }],
     Meeting: 0,
     Facebook: 0,
@@ -114,6 +139,12 @@ const circles_config = [{
 
 var circle_svg;
 circles_config.forEach((circle_config, index) => {
+
+  //Render only one cirle using break condition
+  if (index > 0) {
+    return false;
+  }
+
   //Calculate raduis and Node Origin for Circle A
   if (index === 0) {
     calculateRadius_NodeOriginSequence(circle_config);
