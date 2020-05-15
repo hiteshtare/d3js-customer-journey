@@ -9,6 +9,7 @@ $(function () {
     console.log('Unable to load JSON :(');
   });
 });
+
 //================================Load JSON data================================//
 
 const circles_config = [{
@@ -80,7 +81,7 @@ const circles_config = [{
     }, {
       id: 13,
       type: 'Meeting',
-      day: 9,
+      day: 14,
       desc: 'Meeting 4'
     }],
     Meeting: 0,
@@ -173,7 +174,7 @@ circles_config.forEach((circle_config, index) => {
     //To add max red boundary for Circle A
     renderRedCircle(circle_svg, circle_config);
   }
-});
+}); //end of foreach
 
 
 function renderSliderOnChange() {
@@ -189,3 +190,16 @@ function renderSliderOnChange() {
   //To add click event for all Nodes to navigate for Circle A
   addClickEventsforNodes(filtered_config);
 }
+
+//================================Vertical Carousal================================//
+$(document).ready(function () {
+  var dvCarousel = $('.cv-carousel');
+  $.each(circles_config[0].Nodes, function (index, value) {
+    dvCarousel.append(`<div class='item'>	Day ${value.day}: ${value.desc}</div>`);
+
+    if (index === circles_config[0].Nodes.length - 1) {
+      $('.cv-carousel').carouselVertical();
+    }
+  });
+});
+//================================Vertical Carousal================================//
