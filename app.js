@@ -195,7 +195,7 @@ function renderSliderOnChange() {
 $(document).ready(function () {
   var dvCarousel = $('.cv-carousel');
   $.each(circles_config[0].Nodes, function (index, value) {
-    dvCarousel.append(`<div class='item'>	Day ${value.day}: ${value.desc}</div>`);
+    dvCarousel.append(`<div class='item'><span class='dot ${value.type}'></span><span class='text'> Day ${value.day}: ${value.desc}</span></div>`);
 
     if (index === circles_config[0].Nodes.length - 1) {
       $('.cv-carousel').carouselVertical();

@@ -115,4 +115,36 @@
   border: 1px solid navy;
   border-radius: 5px;
   font-size: 20px;
+  top: 35%;
+  margin-left: 10px;
+  width: 260px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.text {
+  display: inline-block;
+}
+
+.meeting {
+  background-color: #5BC236;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.email {
+  background-color: orange;
+}
+
+.sms {
+  background-color: black;
 }
