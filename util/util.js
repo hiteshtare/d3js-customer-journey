@@ -413,11 +413,9 @@ function renderAllSequenceNodes(p_circle_svg, p_circle_config) {
         });
 
         // To check first item of Email Node as its origin is as 0,300,300 i.e. angel,origin,origin
-        if (index !== 0) {
-          last_Rotate_Value = Nodes.Raduis * index;
+        last_Rotate_Value = last_Rotate_Value + Nodes.Raduis;
 
-          email.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
-        }
+        email.attr("transform", `rotate(${last_Rotate_Value}, ${p_circle_config.originX},${p_circle_config.originY})`);
         break;
 
       case 'SMS':
